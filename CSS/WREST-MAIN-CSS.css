@@ -1,0 +1,122 @@
+body {
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-family: "Open Sans";
+
+}
+
+/* Banner Start*/
+
+.bannercontainer {
+    background-color: #D5E8E4;
+    height: 240px;
+    width: 100%;
+}
+
+.bannercontainer img {
+    position: relative;
+    left: 36px;
+    top: 36px;
+}
+
+/* Banner Stop*/
+
+
+/* Main Nav Start */
+
+.mainnavcontainer {
+    background-color: #298A79;
+    margin: 0px;
+    padding: 0px;
+    width: 100%;
+    height: 80px;
+}
+
+.mainnavcontainer nav {
+    left: 0px;
+    margin: 0px;
+    height: 80px;
+    width: 903px;
+}
+
+.mainnavcontainer ul {
+    width: 903px;
+    height: 80px;
+    list-style:none;
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+}
+
+.mainnavcontainer li {
+    height: inherit;
+    float: left;
+    left: 0px;
+    margin: 0px;
+}
+
+.mainnavcontainer a {
+    display: block;
+    text-align: center;
+    width: 300px;
+    height: 48px;
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: normal;
+    padding:  16px 0px;
+    color: white;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+    border-color: black;
+    left: 0px;
+    margin: 0px;
+    font-size: 150%;
+}
+ 
+.mainnavcontainer a:hover {
+    background-color: #1E5E50; 
+}
+
+/* Main Nav Slutt */
+
+
+/* Main Section Start */
+
+.mainsectioncontainer {
+    margin: 0px 150px 0px 150px;
+}
+
+/* Main Section Stop */
+
+/* Footer Start */
+
+.footercontainer {
+    height: 240px;
+    width: 100%;
+    background-color: #298A79;
+}
+
+.infocontainer {
+    color: white;
+    float: left;
+    text-align: left;
+    margin: 45px 45px 45px 45px;
+    height: 150px;
+    width: 250px;
+    
+}
+
+.infocontainer h3 {
+    margin: 0px;
+}
+
+.infocontainer ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    font-size: 120%;
+}
+
+/* Footer Stop */
