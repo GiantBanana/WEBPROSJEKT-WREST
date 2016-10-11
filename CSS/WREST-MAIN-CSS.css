@@ -1,17 +1,26 @@
 body {
+    font-family: "Open Sans";
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 100%
+}
+
+.bodycontainer {
     width: 100%;
     height: 100%;
     margin: 0px;
     padding: 0px;
-    font-family: "Open Sans";
+    
 }
 
 /* Banner Start*/
 
 .bannercontainer {
     background-color: #D5E8E4;
-    height: 10%;
+    height: 20%;
     width: 100%;
+    z-index: 1;
 }
 
 .bannercontainer img {
@@ -24,6 +33,71 @@ body {
 
 /* Banner Stop*/
 
+/* Developer/User Tab Start */
+
+.developertab {
+    margin: 0px;
+    padding: 0px;
+    width: 20%;
+    height: 5%;
+    position: absolute;
+    z-index: 2;
+    right: 0;
+    bottom: 45%;
+}
+
+.developertab nav {
+    left: 0px;
+    margin: 0px;
+    padding: 0px;
+}
+
+.developertab ul {
+    margin: 0px;
+    padding: 0px;
+    position: relative;
+	display: inline;
+}
+
+.developertab li {
+    height: inherit;
+    display: inline;
+	margin: 0px;
+	padding: 0px;
+}
+
+.developertab a {
+    text-align: center;
+    width: 40%;
+    text-decoration: none;
+    vertical-align: middle;
+    line-height: normal;
+    color: white;
+    margin: 0px;
+    font-size: 1em;
+	padding-left: 5%;
+	padding-right: 5%;
+    border-style: solid;
+    border-width: 1px 1px 0px 1px;
+    border-color: black;
+    border-radius: 10px 10px 0px 0px;
+    background-color: #298A79;
+    font-family: "Open Sans";
+    font-weight: bold;
+
+
+}
+
+.developertab a:hover {
+    background-color: #1E5E50;
+}
+
+.developertab a:focus {
+    background-color: #1E5E50;
+}
+
+
+/* Developer/User Tab Start */
 
 /* Main Nav Start */
 
@@ -32,7 +106,7 @@ body {
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 10%;
+    height: 20%;
 }
 
 .mainnavcontainer nav {
@@ -107,9 +181,10 @@ body {
 /* Footer Start */
 
 .footercontainer {
-    height: 240px;
+    min-height: 240px;
     width: 100%;
     background-color: #298A79;
+    height: 10%;
 }
 
 .infocontainer {

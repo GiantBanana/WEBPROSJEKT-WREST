@@ -4,23 +4,23 @@ body {
     margin: 0px;
     padding: 0px;
     font-family: "Open Sans";
-
 }
 
 /* Banner Start*/
 
 .bannercontainer {
     background-color: #D5E8E4;
-    height: 240px;
+    height: 10%;
     width: 100%;
 }
 
 .bannercontainer img {
     position: relative;
-    left: 36px;
-    top: 36px;
-    margin: 10px;
+	margin-left: 5%;
+	margin-top: 1%;
+	margin-bottom: 1%;
 }
+
 
 /* Banner Stop*/
 
@@ -32,57 +32,52 @@ body {
     margin: 0px;
     padding: 0px;
     width: 100%;
-    height: 80px;
+    height: 10%;
 }
 
 .mainnavcontainer nav {
     left: 0px;
     margin: 0px;
-    height: 80px;
-    width: 100%;
+    padding: 0px;
 }
 
 .mainnavcontainer ul {
-    width: 100%;
-    height: 80px;
-    list-style:none;
-    left: 0px;
     margin: 0px;
     padding: 0px;
     position: relative;
+	display: inline;
 }
 
 .mainnavcontainer li {
     height: inherit;
-    float: left;
-    left: 0px;
-    margin: 0px;
+    display: inline;
+	margin: 0px;
+	padding: 0px;
 }
 
 .mainnavcontainer a {
-    display: block;
     text-align: center;
     width: 300px;
-    height: 48px;
     text-decoration: none;
     vertical-align: middle;
     line-height: normal;
-    padding:  16px 0px;
     color: white;
-    border-style: solid;
-    border-width: 0px 1px 0px 0px;
-    border-color: black;
     left: 0px;
     margin: 0px;
     font-size: 2em;
+	padding-left: 15px;
+	padding-right: 15px;
+    border-style: solid;
+    border-width: 0px 1px 0px 0px;
+    border-color: black;
 }
- 
+
 .mainnavcontainer a:hover {
-    background-color: #1E5E50; 
+    background-color: #1E5E50;
 }
 
 .mainnavcontainer a:focus {
-    background-color: #1E5E50; 
+    background-color: #1E5E50;
 }
 
 /* #wrestepost {
@@ -93,6 +88,8 @@ body {
     color: white;
 }
 */
+
+
 /* Main Nav Slutt */
 
 
@@ -103,7 +100,9 @@ body {
     height: 50%;
 }
 
+
 /* Main Section Stop */
+
 
 /* Footer Start */
 
@@ -120,7 +119,6 @@ body {
     margin: 45px 45px 45px 45px;
     height: 150px;
     width: 250px;
-    
 }
 
 .infocontainer h3 {
@@ -141,5 +139,6 @@ body {
 .infocontainer a:focus {
     text-decoration: underline;
 }
+
 
 /* Footer Stop */
