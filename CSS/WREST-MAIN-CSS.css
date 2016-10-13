@@ -45,7 +45,7 @@ body {
     float:right;
     z-index: 2;
     right: 20vw;
-    bottom:22px;
+    bottom:26px;
 }
 
 .developertab nav {
@@ -57,7 +57,7 @@ body {
 
 .developertab ul {
     margin: 0px;
-    padding: 0px;
+    padding: 10px;
     position: relative;
 	display: inline;
 }
@@ -66,7 +66,7 @@ body {
     height: inherit;
     display: inline;
 	margin: 0px;
-    margin-left: -5px;
+    margin-left: 3px;
 	padding: 0px;
     z-index: 2;
 }
@@ -79,7 +79,7 @@ body {
     line-height: normal;
     color: white;
     margin: 0px;
-    font-size: 1em;
+    font-size: 1.2em;
 	padding-left: 1vw;
 	padding-right: 1vw;
     border-style: solid;
@@ -91,11 +91,10 @@ body {
     font-weight: bold;
     transition: all 0.5s ease-in-out;
     box-shadow: 0px 5px 4px 0px #298A79;
-
 }
 
 .developertab a:hover {
-    box-shadow: 0px 5px 10px #1E5E50;
+    /* box-shadow: 0px 5px 10px #1E5E50; */
     background-color: #1E5E50;
 }
 
