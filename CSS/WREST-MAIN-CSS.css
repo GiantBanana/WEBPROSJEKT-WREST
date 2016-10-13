@@ -66,8 +66,9 @@ body {
     height: inherit;
     display: inline;
 	margin: 0px;
-    margin-left: 5px;
+    margin-left: -5px;
 	padding: 0px;
+    z-index: 2;
 }
 
 .developertab a {
@@ -101,6 +102,14 @@ body {
 .developertab a:focus {
     background-color: #1E5E50;
 }
+
+#active {
+    background-color: #1E5E50;    
+}
+
+#notactive {
+}
+
 
 
 /* Developer/User Tab Start */
