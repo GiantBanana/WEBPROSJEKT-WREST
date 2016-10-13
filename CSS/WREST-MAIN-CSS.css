@@ -38,7 +38,7 @@ body {
 .languagenav {
     margin: 0px;
     padding: 0px;
-    width: 20%;
+    width: 30vw;
     height: 4vh;
     position: absolute;
     display: block;
@@ -48,12 +48,19 @@ body {
     list-style: none;
 }
 
+.languagenav nav {
+    margin: 0;
+    padding: 0;
+    right: 0;
+    position: absolute;
+}
+
 .languagenav ul {
     height: inherit;
     margin: 0px;
+    padding: 0;
     position: relative;
 	display: inline;
-    right: 0;
 }
 
 .languagenav li {
