@@ -89,6 +89,17 @@ body {
     position: relative;
     top: 0.6vw;
 }
+
+.languagenav a:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.languagenav a:focus {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 /* Language Nav Stop */
 
 /* Developer/User Tab Start */
