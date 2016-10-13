@@ -14,6 +14,7 @@ body {
     
 }
 
+
 /* Banner Start*/
 
 .bannercontainer {
@@ -30,12 +31,57 @@ body {
 	margin-bottom: 1%;
 }
 
-
 /* Banner Stop*/
 
 /* Language Nav Start */
 
+.languagenav {
+    margin: 0px;
+    padding: 0px;
+    width: 20%;
+    height: 4vh;
+    position: absolute;
+    display: block;
+    z-index: 2;
+    right: 0;
+    top: 0;
+    list-style: none;
+}
 
+.languagenav ul {
+    height: inherit;
+    margin: 0px;
+    position: relative;
+	display: inline;
+    right: 0;
+}
+
+.languagenav li {
+    height: inherit;
+    display: inline;
+	margin: 0px;
+    margin-left: 1vw;
+	padding: 0px;
+    z-index: 2;
+}
+
+.languagenav a {
+    text-align:center;
+    vertical-align: middle;
+    font-size: 1vw;
+    padding-bottom: 5px;
+    text-decoration: none;
+    right: 0;
+}
+
+.languagenav img {
+    margin: 0;
+    padding: 0;
+    width: 2vw;
+    height: 2vw;
+    position: relative;
+    top: 0.6vw;
+}
 /* Language Nav Stop */
 
 /* Developer/User Tab Start */
