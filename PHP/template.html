@@ -5,37 +5,45 @@ $dev = True;
 $side = 'home';
 
 $homeLinks = array(
-	"en" => "WREST-MAIN-HOME.html",
-	"no" => "WREST-HOME-NO.html",
-	"ny" => "WREST-HOME-NY.html",
+    "en" => "WREST-MAIN-HOME.html",
+    "no" => "WREST-HOME-NO.html",
+    "ny" => "WREST-HOME-NY.html",
 );
 
 $aboutLinks = array(
-	"en" => "about_en.html",
-	"no" => "about_no.html",
-	"ny" => "about_ny.html",
-	);
+    "en" => "about_en.html",
+    "no" => "about_no.html",
+    "ny" => "about_ny.html",
+    );
 
 
 $titles = array(
-	"en" => "englisj text",
-	"no" => " norsk ",
-	"ny" => " new norsk",
-	);
+    "en" => "englisj text",
+    "no" => " norsk ",
+    "ny" => " new norsk",
+    );
 
 
 function getTitle(){
-	echo $GLOBALS['titles'][$GLOBALS['lang']];
+    echo $GLOBALS['titles'][$GLOBALS['lang']];
+}
+
+function getCurrentPageInLang($newlang){
+    switch($GLOBALS['side']){
+        case "home":
+            return $GLOBALS['homeLinks'][$newlang];
+            break;
+    }
 }
 
 function getImports(){
-	echo '<meta charset="utf-8">
+    echo '<meta charset="utf-8">
     <meta name="HTML Start Template" content="A Start Out Template for HTML Files"><link href="../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" />';
 
     // If the dev variable is set also load the dev css
     if($GLOBALS['dev']){
-    	echo '<link href="../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />';
-	}
+        echo '<link href="../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />';
+    }
 
     echo '<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <!-- This makes it possible to use the CSS units
@@ -47,6 +55,9 @@ function getImports(){
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     ';
 }
+
+
+
 
 function getFooter(){
     echo '
@@ -84,30 +95,43 @@ function getFooter(){
     </div>    ';
 }
 
+function setLang($newlang){
+    $GLOBALS['lang'];
+}
+
 function getHeader(){
-    echo '<div class="bodycontainer">
-    <div class="bannercontainer">
-        <img src="../Images/Logos/WREST-MAIN-LOGO.jpg" role="banner" alt="WREST company logo." />
-    </div>
-    
-    <div class="languagenav">
-        <nav role="navigation" tabindex="1">
-        <ul>
-        <li><a href="';
+    echo '<div class="bodycontainer">';
+    echo '<div class="bannercontainer">';
+    echo '<img src="../Images/Logos/WREST-MAIN-LOGO.jpg" role="banner" alt="WREST company logo." />';
+    echo'</div>';
+    echo'<div class="languagenav">';
+    echo'<nav role="navigation" tabindex="1">';
+    echo'<ul>';
+    echo'<li>';
+    echo '<a href="';
+    // Will get the link to the current page in NO
+    echo getCurrentPageInLang('no');
 
-        echo $GLOBALS['homeLinks'][$GLOBALS['lang']];
+    echo'">';
+    echo'<img src="../Images/Icons/NO.png" alt="Trykk her for norsk" />Norsk</a></li>';
+    echo'<li><a href="';
 
-        echo'"><img src="../Images/Icons/NO.png" alt="Trykk her for norsk" />Norsk</a></li>
-        <li><a href="../USER-NYNORSK/WREST-HOME-NY.html"><img src="../Images/Icons/NO.png" alt="Trykk her for nynorsk" />Nynorsk</a></li>    
-        <li><a href="../USER-ENGLISH/WREST-MAIN-HOME.html"><img src="../Images/Icons/GB.png" alt="Click here for English" />English</a></li>    
-        </ul>
-        </nav>    
-    </div>
-        
-        
-    <div class="developertab">
-        <nav role="navigation">
-        <ul>';
+    // Will get the link to the current page in NY
+    echo getCurrentPageInLang('ny');
+
+    echo'"><img src="../Images/Icons/NO.png" alt="Trykk her for nynorsk" />Nynorsk</a></li>';
+    echo'<li><a href="';
+
+    // Will get the link to the current page in EN
+    echo getCurrentPageInLang('en');
+
+    echo '"><img src="../Images/Icons/GB.png" alt="Click here for English" />English</a></li>';
+    echo'</ul>';
+    echo'</nav>';
+    echo'</div>';
+    echo'<div class="developertab">';
+    echo'<nav role="navigation">';
+    echo'<ul>';
 
      if($GLOBALS['dev']){
         echo '<li><a href="WREST-HOME-NO.html" id="active">Bruker</a></li
@@ -117,32 +141,31 @@ function getHeader(){
         ><li><a href="../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html" id="active">Webdesigner</a></li>';
         }
 
-    echo '</ul>
-        </nav>    
-    </div>    
-    <div class="mainnavcontainer">
-        <nav role="navigation">
-            <ul>
-            <!-- 
+    echo '</ul>';
+    echo'</nav>';
+    echo'</div>';
+    echo'<div class="mainnavcontainer">';
+    echo'<nav role="navigation">';
+    echo'<ul>';
+    echo'<!-- 
             Fixed the invi margin between li element by doing the 
             <li> element</li
             >
 
             Its a fucked up thing 
             Sauce: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
-            -->
-                <li><a href="';
-                    echo $GLOBALS['homeLinks'][$GLOBALS['lang']];
-                echo'">Hjem</a></li
+            -->';
+    echo'<li><a href="';
+    echo $GLOBALS['homeLinks'][$GLOBALS['lang']];
+    echo'">Hjem</a>';
+    echo'</li
                 ><li><a href="WREST-ABOUT-NO.html">Om</a></li
                 ><li><a href="WREST-DOWNLOAD-NO.html">Nedlasting</a></li>
-            </ul>
-        </nav>
-    </div>';
+            </ul>';
+    echo'</nav>';
+    echo'</div>';
         echo ' <div class="mainsectioncontainer">
-        <section role="main">
-            
-        ';
+        <section role="main">';
 }
 
 
