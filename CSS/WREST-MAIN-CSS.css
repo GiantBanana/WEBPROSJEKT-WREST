@@ -173,7 +173,7 @@ body {
     background-color: #1E5E50;
 }
 
-#active {
+#developertabactive {
     background-color: #1E5E50;    
 }
 
@@ -251,6 +251,10 @@ body {
 
 .mainnavcontainer a:focus {
     background-color: #1E5E50;
+}
+
+#mainnavactive {
+    
 }
 
 /* #wrestepost {
