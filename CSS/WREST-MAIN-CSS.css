@@ -286,10 +286,12 @@ body {
 /* Footer Start_____________________________________________- */
 
 .footercontainer {
+    position:absolute;
     min-height: 240px;
     width: 100%;
     background-color: #298A79;
     height: 10%;
+    bottom:0px;
 }
 
 .infocontainer {
