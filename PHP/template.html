@@ -39,11 +39,11 @@ function getCurrentPageInLang($newlang){
 function getImports(){
     ?>
     <meta charset="utf-8">
-    <meta name="HTML Start Template" content="A Start Out Template for HTML Files"><link href="../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" />
+    <meta name="HTML Start Template" content="A Start Out Template for HTML Files"><link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" />
     <?php
     // If the dev variable is set also load the dev css
     if($GLOBALS['dev']){
-        echo '<link href="../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />';
+        echo '<link href="../../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />';
     }
     ?>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
@@ -104,7 +104,7 @@ function setLang($newlang){
 function getHeader(){?>
     <div class="bodycontainer">
         <div class="bannercontainer">
-            <img src="../Images/Logos/WREST-MAIN-LOGO.jpg" role="banner" alt="WREST company logo." />
+            <img src="../../Images/Logos/WREST-MAIN-LOGO.jpg" role="banner" alt="WREST company logo." />
         </div>
         <div class="languagenav">
             <nav role="navigation" tabindex="1">
@@ -116,7 +116,7 @@ function getHeader(){?>
     echo getCurrentPageInLang('no');
     ?>
     ">
-                            <img src="../Images/Icons/NO.png" alt="Trykk her for norsk" />Norsk</a>
+                            <img src="../../Images/Icons/NO.png" alt="Trykk her for norsk" />Norsk</a>
                     </li>
                     <li>
                         <a href="
@@ -124,7 +124,7 @@ function getHeader(){?>
     // Will get the link to the current page in NY
     echo getCurrentPageInLang('ny');
     ?>
-    "><img src="../Images/Icons/NO.png" alt="Trykk her for nynorsk" />Nynorsk</a>
+    "><img src="../../Images/Icons/NO.png" alt="Trykk her for nynorsk" />Nynorsk</a>
                     </li>
                     <li>
                         <a href="
@@ -133,7 +133,7 @@ function getHeader(){?>
     echo getCurrentPageInLang('en');
     ?>
 
-    "><img src="../Images/Icons/GB.png" alt="Click here for English" />English</a>
+    "><img src="../../Images/Icons/GB.png" alt="Click here for English" />English</a>
                     </li>
                 </ul>
             </nav>

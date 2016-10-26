@@ -11,7 +11,6 @@ body {
     height: 100%;
     margin: 0px;
     padding: 0px;
-    
 }
 
 
@@ -111,24 +110,31 @@ body {
     padding: 0px;
     width: 4vw;
     height: 4vh;
-    position:relative;
+    position: relative;
     display: block;
     float:right;
     z-index: 2;
     right: 20vw;
-    bottom:26px;
+    bottom: 25px;
+}
+
+@-moz-document url-prefix() { 
+     
+.developertab {
+    bottom: 50px;
+ }
 }
 
 .developertab nav {
     position:absolute;
-    left: 0px;
-    margin: 0px;
-    padding: 0px;
+    left: 0;
+    margin: 0;
+    padding: 0;
 }
 
 .developertab ul {
     margin: 0px;
-    padding: 10px;
+    padding: 5vw;
     position: relative;
 	display: inline;
 }
@@ -286,12 +292,12 @@ body {
 /* Footer Start_____________________________________________- */
 
 .footercontainer {
-    position:absolute;
     min-height: 240px;
     width: 100%;
     background-color: #298A79;
     height: 10%;
-    bottom:0px;
+    position: absolute;
+    bottom: 0;
 }
 
 .infocontainer {

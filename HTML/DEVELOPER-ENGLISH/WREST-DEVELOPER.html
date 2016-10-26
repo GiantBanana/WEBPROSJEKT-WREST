@@ -1,54 +1,18 @@
+<?php include '../../PHP/template.html';     
+$GLOBALS['dev'] = True;
+$GLOBALS['lang'] = "en";
+$GLOBALS['side'] = "Dev"; ?>
 <!DOCTYPE HTML>
 <html lang=eng>
 <head>
-    <meta charset="utf-8">
-    <meta name="HTML Start Template" content="A Start Out Template for HTML Files">
-    <title>WREST Main Template</title>
-    <link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" />
-    <link href="../../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />
-    <!-- This makes it possible to use the CSS units
-    50 vw       | % of vertical viewport
-    50 vh       | % of horizontal viewport
-    60 vmin     | % of min vertical viewport
-    60 vmax     | % of max vertical viewport
-    -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        <?php getTitle(); ?> </title>
+    <?php getImports(); ?>
 </head>
 
 <body>
-    <div class="bodycontainer">
-    <div class="bannercontainer">
-        <img src="../../Images/Logo's/WREST-MAIN-LOGO.jpg" role="banner" alt="WREST company logo." />
-    </div>
-    <div class="developertab">
-        <nav role="navigation">
-        <ul>
-        <li><a href="../USER-ENGLISH/WREST-MAIN-HOME.html" id="notactive">User</a></li
-        ><li><a href="WREST-DEVELOPER.html" id="active">Developer</a></li>    
-        </ul>
-        </nav>    
-    </div>    
-    <div class="mainnavcontainer">
-        <nav role="navigation">
-            <ul>
-            <!-- 
-            Fixed the invi margin between li element by doing the 
-            <li> element</li
-            >
-
-            Its a fucked up thing 
-            Sauce: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
-            -->
-                <li><a>Home</a></li
-                ><li><a>About</a></li
-                ><li><a>Download</a></li>
-            </ul>
-        </nav>
-    </div>
-    <div class="mainsectioncontainer">
-        <br>
-        <a href="../USER-ENGLISH/WREST-MAIN-HOME.html" id="backtouser">CLICK HERE TO GO BACK TO THE USER SECTION OF THE SITE!</a>
+    
+    <?php getHeader();?>
         
         <section role="main">
             <h1>Lorem Ipsum</h1>
@@ -61,38 +25,10 @@
                 <br> Nullam sem quam, egestas et metus ac, dictum malesuada massa. Duis porta ac felis a consequat. Nulla facilisi. Phasellus eu risus et arcu accumsan maximus a eu felis. Sed aliquam tortor vel felis sodales, vitae ornare eros ullamcorper. Nullam eget dignissim massa. Suspendisse lobortis iaculis erat. Duis facilisis libero vitae metus euismod, ac cursus est sodales.
                 <br>
                 <br> Etiam nec justo eget erat venenatis tincidunt et et mi. Nulla ornare tortor non hendrerit viverra. Proin vitae placerat lacus, in tincidunt sapien. Praesent at ipsum metus. Proin fermentum felis dui, at lacinia neque vestibulum vel. Morbi elementum, nisi eu vestibulum mollis, elit leo vulputate nisl, sed laoreet lectus quam vitae tortor. Aenean consectetur bibendum dapibus. Mauris neque ex, porttitor at arcu eu, tristique pretium neque. Suspendisse eu tempus purus, facilisis dignissim nibh. Fusce pharetra felis id quam venenatis iaculis. Aliquam ac est auctor, scelerisque urna scelerisque, sodales nibh.</p>
-        </section>
-    </div>
-    <div class="footercontainer">
-        <footer>
-            <div class="infocontainer">
-                <h3>Presets</h3>
-                <ul>
-                    <li><a>FargeblindA</a></li>
-                    <li><a>FargeblindB</a></li>
-                    <li><a>Dysleksi</a></li>
-                </ul>
-            </div>
-            <div class="infocontainer">
-                <h3>Brukerstøtte</h3>
-                <ul>
-                    <li><a>Installasjonshjelp</a></li>
-                    <li><a>Rådgivning</a></li>
-                    <li><a>Profilering</a></li>
-                </ul>
-            </div>
-            <div class="infocontainer">
-                <h3>Kontakt</h3>
-                <ul>
-                    <li><a>Tlf: 123 44 567</a></li>
-                    <li><a>Epost: faq@wrest.com</a></li>
-                    <li><a>Wrest Road</a></li>
-                    <li><a>0000 Oslo</a></li>
-                </ul>
-            </div>
-        </footer>
-    </div>
-    </div>    
+        </section> 
+    
+    <?php getFooter();?>   
+    
 </body>
 
 </html>
