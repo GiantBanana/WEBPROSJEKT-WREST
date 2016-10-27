@@ -13,6 +13,28 @@ body {
     padding: 0px;
 }
 
+#skip-link{
+  position:absolute;
+  top:0px;
+  left:0px;
+  display:block;
+
+
+  z-index:100;
+  padding:5px;
+}
+
+#skip-link a{
+  color:transparent;
+}
+
+#skip-link a:focus{
+  color:black;
+}
+
+
+
+
 
 /* ____________________________Banner Start _______________________________________*/
 
