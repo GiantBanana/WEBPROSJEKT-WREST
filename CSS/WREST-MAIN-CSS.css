@@ -32,6 +32,18 @@ body {
   color:black;
 }
 
+xmp{
+  text-align: left;
+  display:inline-block;
+  background-color:#eee;
+  border:1px solid gray;
+  font-family:monospace;
+  font-size:1.2rem;
+  width:auto;
+  margin:2vmin;
+  margin-left:0;
+  padding:1vmin;
+}
 
 
 
@@ -319,7 +331,8 @@ body {
 }
 
 .mainsectioncontainer h2 {
-    font-size: 1vw;
+    font-size: 1.5rem;
+    margin-left:1rem;
 }
 
 
