@@ -16,6 +16,12 @@ $aboutLinks = array(
     "ny" => "../USER-NYNORSK/WREST-ABOUT-NY.html",
     );
 
+$devLinks = array(
+    "en" => "../DEVELOPER-ENGLISH/WREST-DEVELOPER.html",
+    "no" => "../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html",
+    "ny" => "../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html",
+    );
+
 $downloadLinks = array(
   "en" => "../USER-ENGLISH/WREST-MAIN - DOWNLOAD.html",
   "no" => "../USER-NORWEGIAN/WREST-DOWNLOAD-NO.html",
@@ -79,6 +85,9 @@ function getCurrentPageInLang($newlang){
             break;
         case "download":
             return $GLOBALS['downloadLinks'][$newlang];
+            break;
+        case "dev":
+            return $GLOBALS['devLinks'][$newlang];
             break;
     }
 }
