@@ -292,11 +292,11 @@ body {
     height: 50%;
 }
 
-.mainsection h1 {
+.mainsectioncontainer h1 {
     font-size: 2vw;
 }
 
-.mainsection h2 {
+.mainsectioncontainer h2 {
     font-size: 1vw;
 }
 
