@@ -1,0 +1,20 @@
+TODO:
+
+TODO: Fylle ut Brødtext på sidene
+  -eng
+      -home
+      -about
+      -download
+  -no
+      -home
+      -about
+      -download
+  -ny
+      -home
+      -about
+      -download
+
+TODO: Fylle ut text for dev
+  Fylle text (Lukas)
+  Lage dokumentation (Lukas)
+  
