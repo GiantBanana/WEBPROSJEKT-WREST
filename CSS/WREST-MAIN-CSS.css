@@ -103,6 +103,11 @@ body {
     cursor: pointer;
 }
 
+.selectedLang{/*Lukas: added something to show what language is selected,
+  this class is applied to the selected language, feel free to prettify */
+    border-bottom:1px solid black;
+}
+
 /* Language Nav Stop */
 
 /* Developer/User Tab Start */
