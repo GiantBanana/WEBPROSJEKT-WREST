@@ -166,11 +166,11 @@ function getHeader(){?>
                             <ul>
                                 <?php
      if($GLOBALS['dev']){
-        echo '<li><a href="WREST-HOME-NO.html" id="developertabactive">' . $GLOBALS['userWords'][$GLOBALS['lang']] . '</a></li
-        ><li><a href="../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html" id="notactive">' . $GLOBALS['developerWords'][$GLOBALS['lang']] . '</a></li>';
+        echo '<li><a href="' . $GLOBALS['homeLinks'][$GLOBALS['lang']] . '" id="developertabactive">' . $GLOBALS['userWords'][$GLOBALS['lang']] . '</a></li
+        ><li><a href="' . $GLOBALS['devLinks'][$GLOBALS['lang']] . '" id="notactive">' . $GLOBALS['developerWords'][$GLOBALS['lang']] . '</a></li>';
         }  else{
-            echo '<li><a href="WREST-HOME-NO.html" id="notactive">' . $GLOBALS['userWords'][$GLOBALS['lang']] . '</a></li
-        ><li><a href="../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html" id="developertabactive">' . $GLOBALS['developerWords'][$GLOBALS['lang']] . '</a></li>';
+            echo '<li><a href="' . $GLOBALS['homeLinks'][$GLOBALS['lang']] . '" id="notactive">' . $GLOBALS['userWords'][$GLOBALS['lang']] . '</a></li
+        ><li><a href="' . $GLOBALS['devLinks'][$GLOBALS['lang']] . '" id="developertabactive">' . $GLOBALS['developerWords'][$GLOBALS['lang']] . '</a></li>';
         }
     ?>
                             </ul>
