@@ -28,6 +28,36 @@ $linksRootFolders = array(
   "ny" => "../USER-NYNORSK/",
 );
 
+$homeWords = array(
+  "en" => "Home",
+  "no" => "Hjem",
+  "ny" => "Heim",
+);
+
+$aboutWords = array(
+  "en" => "About",
+  "no" => "Om oss",
+  "ny" => "Om Oss",
+);
+
+$downloadWords = array(
+  "en" => "Download",
+  "no" => "Nedlastinger",
+  "ny" => "Nedlastingar",
+);
+
+$userWords = array(
+  "en" => "User",
+  "no" => "Bruker",
+  "ny" => "Brukar",
+);
+
+$developerWords = array(
+  "en" => "Developer",
+  "no" => "Utvikler",
+  "ny" => "Utviklar",
+);
+
 $titles = array(
     "en" => "englisj text",
     "no" => " norsk ",
@@ -36,8 +66,7 @@ $titles = array(
 
 
 function getTitle(){
-    //echo $GLOBALS['titles'][$GLOBALS['lang']];
-    echo getCurrentPageInLang("ny");
+    echo $GLOBALS['titles'][$GLOBALS['lang']];
 }
 
 function getCurrentPageInLang($newlang){
@@ -74,46 +103,6 @@ function getImports(){
     -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <?php
-}
-
-
-
-
-function getFooter(){
-    ?>
-            </section>
-            </div>
-            <div class="footercontainer">
-                <footer>
-                    <div class="infocontainer">
-                        <h3>Presets</h3>
-                        <ul>
-                            <li><a>FargeblindA</a></li>
-                            <li><a>FargeblindB</a></li>
-                            <li><a>Dysleksi</a></li>
-                        </ul>
-                    </div>
-                    <div class="infocontainer">
-                        <h3>Brukerstøtte</h3>
-                        <ul>
-                            <li><a>Installasjonshjelp</a></li>
-                            <li><a>Rådgivning</a></li>
-                            <li><a>Profilering</a></li>
-                        </ul>
-                    </div>
-                    <div class="infocontainer">
-                        <h3>Kontakt</h3>
-                        <ul>
-                            <li><a>Tlf: 123 44 567</a></li>
-                            <li><a>Epost: faq@wrest.com</a></li>
-                            <li><a>Wrest Road</a></li>
-                            <li><a>0000 Oslo</a></li>
-                        </ul>
-                    </div>
-                </footer>
-            </div>
-            </div>
-            <?php
 }
 
 function setLang($newlang){
@@ -160,11 +149,11 @@ function getHeader(){?>
                             <ul>
                                 <?php
      if($GLOBALS['dev']){
-        echo '<li><a href="WREST-HOME-NO.html" id="developertabactive">Bruker</a></li
-        ><li><a href="../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html" id="notactive">Webdesigner</a></li>';
+        echo '<li><a href="WREST-HOME-NO.html" id="developertabactive">' . $GLOBALS['userWords'][$GLOBALS['lang']] . '</a></li
+        ><li><a href="../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html" id="notactive">' . $GLOBALS['developerWords'][$GLOBALS['lang']] . '</a></li>';
         }  else{
-            echo '<li><a href="WREST-HOME-NO.html" id="notactive">Bruker</a></li
-        ><li><a href="../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html" id="developertabactive">Webdesigner</a></li>';
+            echo '<li><a href="WREST-HOME-NO.html" id="notactive">' . $GLOBALS['userWords'][$GLOBALS['lang']] . '</a></li
+        ><li><a href="../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html" id="developertabactive">' . $GLOBALS['developerWords'][$GLOBALS['lang']] . '</a></li>';
         }
     ?>
                             </ul>
@@ -185,10 +174,10 @@ function getHeader(){?>
     <?php
     echo $GLOBALS['homeLinks'][$GLOBALS['lang']];
     ?>
-    ">Hjem</a>
+    "><?php echo $GLOBALS['homeWords'][$GLOBALS['lang']]; ?></a>
                                 </li>
-                                <li><a href="<?php $GLOBALS['aboutLinks'][$GLOBALS['lang']]; ?>">Om</a></li>
-                                <li><a href="<?php $GLOBALS['downloadLinks'][$GLOBALS['lang']]; ?>">Nedlasting</a></li>
+                                <li><a href="<?php echo $GLOBALS['aboutLinks'][$GLOBALS['lang']]; ?>"><?php echo $GLOBALS['aboutWords'][$GLOBALS['lang']]; ?></a></li>
+                                <li><a href="<?php echo $GLOBALS['downloadLinks'][$GLOBALS['lang']]; ?>"><?php echo $GLOBALS['downloadWords'][$GLOBALS['lang']]; ?></a></li>
                             </ul>
                         </nav>
                     </div>
@@ -197,5 +186,112 @@ function getHeader(){?>
                             <?php
 }
 
+function getFooter(){
+    if($GLOBALS['lang'] == 'no'){?>
+            </section>
+            </div>
+            <div class="footercontainer">
+                <footer>
+                    <div class="infocontainer">
+                        <h3>Presets</h3>
+                        <ul>
+                            <li><a>FargeblindA</a></li>
+                            <li><a>FargeblindB</a></li>
+                            <li><a>Dysleksi</a></li>
+                        </ul>
+                    </div>
+                    <div class="infocontainer">
+                        <h3>Brukerstøtte</h3>
+                        <ul>
+                            <li><a>Installasjonshjelp</a></li>
+                            <li><a>Rådgivning</a></li>
+                            <li><a>Profilering</a></li>
+                        </ul>
+                    </div>
+                    <div class="infocontainer">
+                        <h3>Kontakt</h3>
+                        <ul>
+                            <li><a>Tlf: 123 44 567</a></li>
+                            <li><a>Epost: faq@wrest.com</a></li>
+                            <li><a>Wrest Road</a></li>
+                            <li><a>0000 Oslo</a></li>
+                        </ul>
+                    </div>
+                </footer>
+            </div>
+            </div>
+            <?php
+          }else if($GLOBALS['lang'] == 'en'){
+            ?>
+          </section>
+          </div>
+          <div class="footercontainer">
+              <footer>
+                  <div class="infocontainer">
+                      <h3>Presets</h3>
+                      <ul>
+                          <li><a>Colorblind A</a></li>
+                          <li><a>Colorblind B</a></li>
+                          <li><a>Dysleksi</a></li>
+                      </ul>
+                  </div>
+                  <div class="infocontainer">
+                      <h3>User Support</h3>
+                      <ul>
+                          <li><a>Installation help</a></li>
+                          <li><a>Consulting</a></li>
+                          <li><a>Profiling</a></li>
+                      </ul>
+                  </div>
+                  <div class="infocontainer">
+                      <h3>Contact</h3>
+                      <ul>
+                          <li><a>Tlf: 123 44 567</a></li>
+                          <li><a>Epost: faq@wrest.com</a></li>
+                          <li><a>Wrest Road</a></li>
+                          <li><a>0000 Oslo</a></li>
+                      </ul>
+                  </div>
+              </footer>
+          </div>
+          </div>
 
+            <?php
+          }else if($GLOBALS['lang'] == 'ny'){
+            ?>
+          </section>
+          </div>
+          <div class="footercontainer">
+              <footer>
+                  <div class="infocontainer">
+                      <h3>Presets</h3>
+                      <ul>
+                          <li><a>FargeblindA</a></li>
+                          <li><a>FargeblindB</a></li>
+                          <li><a>Dysleksi</a></li>
+                      </ul>
+                  </div>
+                  <div class="infocontainer">
+                      <h3>Brukarstøtte</h3>
+                      <ul>
+                          <li><a>Installasjonshjelp</a></li>
+                          <li><a>Rådgivning</a></li>
+                          <li><a>Profilering</a></li>
+                      </ul>
+                  </div>
+                  <div class="infocontainer">
+                      <h3>Kontakt</h3>
+                      <ul>
+                          <li><a>Tlf: 123 44 567</a></li>
+                          <li><a>Epost: faq@wrest.com</a></li>
+                          <li><a>Wrest Road</a></li>
+                          <li><a>0000 Oslo</a></li>
+                      </ul>
+                  </div>
+              </footer>
+          </div>
+          </div>
+            <?php
+          }
+}
 ?>
