@@ -51,7 +51,7 @@ xmp{
 /* ____________________________Banner Start _______________________________________*/
 
 .bannercontainer {
-    background-color: #D5E8E4;
+    background-color: #D5E8E4; 
     height: 20%;
     width: 100%;
     z-index: 1;
@@ -116,6 +116,7 @@ xmp{
     padding-bottom: 5px;
     text-decoration: none;
     right: 0;
+	color: #1E5E50;
 }
 
 .languagenav img {
@@ -130,17 +131,21 @@ xmp{
 
 .languagenav a:hover {
     text-decoration: underline;
+	-moz-text-decoration-color: #1E5E50; /* \ o / */
+	text-decoration-color: #1E5E50; /* \ o / */
     cursor: pointer;
 }
 
 .languagenav a:focus {
     text-decoration: underline;
+	-moz-text-decoration-color: #1E5E50; /* \ o / */
+	text-decoration-color: #1E5E50; /* \ o / */
     cursor: pointer;
 }
 
 .selectedLang{/*Lukas: added something to show what language is selected,
   this class is applied to the selected language, feel free to prettify */
-    border-bottom:1px solid black;
+    border-bottom: 1px solid #1E5E50; /* Endret farge - \ o / */
 }
 
 /* Language Nav Stop */
@@ -238,7 +243,6 @@ xmp{
 
 .mainnavcontainer {
    // border-top:1px solid black;
-
     background-color: #298A79;
     margin: 0px;
     padding: 0px;
@@ -251,7 +255,7 @@ xmp{
 .mainnavcontainer nav {
     left: 0px;
     margin: 0px;
-    padding: 0px;
+    padding: 5px; /* \ o / */
     padding-left: 71px; /* rein */
 }
 
@@ -284,9 +288,11 @@ xmp{
     font-size: 2em;
 	padding-left: 16px;
 	padding-right: 16px;
-    border-style: solid;
+    /* border-style: solid;
     border-width: 0px 1px 0px 0px;
-    border-color: black;
+    border-color: black; 
+	
+	\ o / */
 
 }
 
