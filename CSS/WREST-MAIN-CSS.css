@@ -125,6 +125,7 @@ xmp{
     height: 2vw;
     position: relative;
     top: 0.6vw;
+    padding-right: 3px;
 }
 
 .languagenav a:hover {
@@ -327,12 +328,11 @@ xmp{
 }
 
 .mainsectioncontainer h1 {
-    font-size: 2vw;
+    font-size: 2rem;
 }
 
 .mainsectioncontainer h2 {
     font-size: 1.5rem;
-    margin-left:1rem;
 }
 
 
