@@ -28,10 +28,40 @@ $downloadLinks = array(
   "ny" => "../USER-NYNORSK/WREST-DOWNLOAD-NY.html",
 );
 
+$devDocLinks = array(
+  "en" => "../DEVELOPER-ENGLISH/WREST-DEVELOPER.html",
+  "no" => "../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html",
+  "ny" => "../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html",
+);
+
+$devGitLinks = array(
+  "en" => "../DEVELOPER-ENGLISH/WREST-DEVELOPER.html",
+  "no" => "../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html",
+  "ny" => "../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html",
+);
+
 $linksRootFolders = array(
   "en" => "../USER-ENGLISH/",
   "no" => "../USER-NORWEGIAN/",
   "ny" => "../USER-NYNORSK/",
+);
+
+$linkUncomplete = array(
+  "en" => "../TOBECOMPLETED/EN.html",
+  "no" => "../TOBECOMPLETED/NO.html",
+  "ny" => "../TOBECOMPLETED/NY.html",
+);
+
+$devDocWords = array(
+  "en" => "Documentation",
+  "no" => "Dokumentasjon",
+  "ny" => "Dokumantasjon",
+);
+
+$devGitWords = array(
+  "en" => "SourceCode",
+  "no" => "KildeKode",
+  "ny" => "KjeldeKode",
 );
 
 $homeWords = array(
@@ -65,10 +95,11 @@ $developerWords = array(
 );
 
 $titles = array(
-    "en" => "englisj text",
-    "no" => " norsk ",
-    "ny" => " new norsk",
+    "en" => "Wrest Wcag Requst Standard | EN | ",
+    "no" => "Wrest Wcag Requst Standard | NO | ",
+    "ny" => "Wrest Wcag Requst Standard | NY | ",
     );
+
 $skipToContentWords = array(
   "en" => "Skip to Content",
   "no" => "Hopp til hovedinnhold",
@@ -108,6 +139,7 @@ function getImports(){
         echo '<link href="../../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />';
     //}
     ?>
+    <script src="../../JS/main_script.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
         <!-- This makes it possible to use the CSS units
     50 vw       | % of vertical viewport
@@ -135,8 +167,12 @@ function getHeader(){?>
                     <img src="../../Images/Logos/WREST_LOGO_LARGE.png" role="banner" alt="WREST company logo." />
                 </div>
                 <div class="languagenav">
-                    <nav role="navigation" tabindex="0">
-                        <ul>
+                    <nav role="navigation" tabindex="-1">
+                        <ul >
+                          <li><a id="descreaseFont" onClick="descreaseFont()" href="#" style="font-weight:900; font-size:1.1rem; color:black">[-]</a></li>
+                          <li style="position:relative;top:0.35rem;"><span style="font-size: 0.5rem;">a</span><span style="font-size: 1rem;">a</span><span style="font-size: 1.5rem;">a</span></li>
+                          <li><a id="increaseFont" onClick="increaseFont()" href="#" style="font-weight:900; font-size:1.1rem; color:black">[+]</a></li>
+
                             <li>
                                 <a href="
 
@@ -190,12 +226,32 @@ function getHeader(){?>
             Its a fucked up thing
             Sauce: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
             -->
+            <?php
+              if($GLOBALS['dev']){
+                ?>
+                <li>
+                    <a href="<?php $GLOBALS['devDocLinks'][$GLOBALS['lang']];?>">
+                        <?php echo $GLOBALS['devDocWords'][$GLOBALS['lang']]; ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo $GLOBALS['linkUncomplete'][$GLOBALS['lang']]; ?>">
+                        <?php echo $GLOBALS['devGitWords'][$GLOBALS['lang']]; ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="<?php echo $GLOBALS['downloadLinks'][$GLOBALS['lang']]; ?>">
+                        <?php echo $GLOBALS['downloadWords'][$GLOBALS['lang']]; ?>
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+            <?php
+              }
+              else{?>
                             <li>
-                                <a href="
-    <?php
-    echo $GLOBALS['homeLinks'][$GLOBALS['lang']];
-    ?>
-    ">
+                                <a href="<?php $GLOBALS['homeLinks'][$GLOBALS['lang']];?>">
                                     <?php echo $GLOBALS['homeWords'][$GLOBALS['lang']]; ?>
                                 </a>
                             </li>
@@ -212,6 +268,7 @@ function getHeader(){?>
                         </ul>
                     </nav>
                 </div>
+                <?php }?>
                 <div class="mainsectioncontainer">
                     <section role="main" id="content">
                         <?php
