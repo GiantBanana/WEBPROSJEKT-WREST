@@ -1,10 +1,20 @@
 document.addEventListener("DOMContentLoaded", function(event) {
   console.log("DOM fully loaded and parsed");
   root = document.querySelector(":root");
+  populateJavascriptFunctionKeys();
   readCookie();
 });
 var root;
 var fontSize = 16;
+
+function populateJavascriptFunctionKeys(){
+  document.getElementById('descreaseFont').innerHTML = "[-]";
+  document.getElementById('increaseFont').innerHTML = "[+]";
+  var as = document.getElementsByClassName('aSymbol');
+  for(var i = 0; i < as.length; i++){
+    as[i].innerHTML = "a";
+  }
+}
 
 function readCookie(){
   var ca = document.cookie.split(';');
