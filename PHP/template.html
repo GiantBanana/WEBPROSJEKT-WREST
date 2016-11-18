@@ -148,7 +148,8 @@ function getImports(){
     60 vmax     | % of max vertical viewport
     -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="shortcut icon" type="image/png" href="../../Images/Logos/WREST_LOGO_LARGE.png"/>
+
+          <link rel="shortcut icon" type="image/png" href="../../Images/Logos/WREST_LOGO_LARGE.png"/>
         <?php
 }
 
@@ -164,7 +165,9 @@ function getHeader(){?>
             </div>
             <div class="bodycontainer">
                 <div class="bannercontainer">
+                  <a href="<?php echo $GLOBALS['homeLinks'][$GLOBALS['lang']]; ?>">
                     <img src="../../Images/Logos/WREST_LOGO_LARGE.png" role="banner" alt="WREST company logo." />
+                  </a>
                 </div>
                 <div class="languagenav">
                     <nav role="navigation" tabindex="-1">
