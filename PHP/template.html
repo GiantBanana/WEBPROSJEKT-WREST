@@ -23,9 +23,9 @@ $devLinks = array(
     );
 
 $downloadLinks = array(
-  'en' => '../USER-ENGLISH/WREST-MAIN - DOWNLOAD.html',
-  'no' => '../USER-NORWEGIAN/WREST-DOWNLOAD-NO.html',
-  'ny' => '../USER-NYNORSK/WREST-DOWNLOAD-NY.html',
+  'en' => 'https://chrome.google.com/webstore/detail/wrest/lbcpokhocfblmhlaanfnchmjfjacnede?utm_source=chrome-app-launcher-info-dialog',
+  'no' => 'https://chrome.google.com/webstore/detail/wrest/lbcpokhocfblmhlaanfnchmjfjacnede?utm_source=chrome-app-launcher-info-dialog',
+  'ny' => 'https://chrome.google.com/webstore/detail/wrest/lbcpokhocfblmhlaanfnchmjfjacnede?utm_source=chrome-app-launcher-info-dialog',
 );
 
 $devDocLinks = array(
@@ -62,6 +62,12 @@ $devGitWords = array(
   'en' => 'SourceCode',
   'no' => 'KildeKode',
   'ny' => 'KjeldeKode',
+);
+
+$demoPageWords = array(
+  'en' => 'Demo Page',
+  'no' => 'Demo Side',
+  'ny' => 'Demo Side',
 );
 
 $homeWords = array(
@@ -246,7 +252,7 @@ function getHeader()
               if ($GLOBALS['dev']) {
                   ?>
                 <li>
-                    <a href="<?php $GLOBALS['devDocLinks'][$GLOBALS['lang']]; ?>">
+                    <a href="<?php echo $GLOBALS['devDocLinks'][$GLOBALS['lang']]; ?>">
                         <?php echo $GLOBALS['devDocWords'][$GLOBALS['lang']]; ?>
                     </a>
                 </li>
@@ -258,6 +264,11 @@ function getHeader()
                 <li>
                     <a href="<?php echo $GLOBALS['downloadLinks'][$GLOBALS['lang']]; ?>">
                         <?php echo $GLOBALS['downloadWords'][$GLOBALS['lang']]; ?>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.passeride.com">
+                        <?php echo $GLOBALS['demoPageWords'][$GLOBALS['lang']]; ?>
                     </a>
                 </li>
             </ul>
@@ -272,7 +283,7 @@ function getHeader()
                                 <?php if ($GLOBALS['side'] == 'home') {
                       ?>class="currentPage"<?php
                   } ?>
-                                 href="<?php $GLOBALS['homeLinks'][$GLOBALS['lang']]; ?>">
+                                 href="<?php echo $GLOBALS['homeLinks'][$GLOBALS['lang']]; ?>">
                                     <?php echo $GLOBALS['homeWords'][$GLOBALS['lang']]; ?>
                                 </a>
                             </li>
