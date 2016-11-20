@@ -34,17 +34,52 @@ body {
   color:black;
 }
 
-xmp{
+smallcode{
+  background-color:rgb(209, 223, 233);
+  font-family:monospace;
+  font-size:1.2rem;
+}
+
+code{
   text-align: left;
   display:inline-block;
   background-color:rgb(209, 223, 233);
-  border:2px dotted #1b3f7d;
+  white-space: pre;
+  border:1px solid #1b3f7d;
   font-family:monospace;
   font-size:1.2rem;
   width:auto;
   margin:2vmin;
   margin-left:0;
   padding:1vmin;
+}
+
+code[lang="php"]{
+  background-image: url("../Images/Logos/PHP.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 10%;
+}
+
+code[lang="html"]{
+  background-image: url("../Images/Logos/html5.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 10%;
+}
+
+code[lang="javascript"]{
+  background-image: url("../Images/Logos/javascript.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 7%;
+}
+
+code[lang="json"]{
+  background-image: url("../Images/Logos/json.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 10%;
 }
 
 
@@ -362,6 +397,30 @@ xmp{
     font-size: 1.5rem;
 }
 
+.imgWithTitle{
+  float:right;
+  display:inline-block;
+  position:relative;
+  width:35%;
+  margin:0px;
+  border:1px solid black;
+  background-color:white;
+}
+
+.imgWithTitle img{
+  width:100%;
+  height:auto;
+  margin:0px;
+  border-bottom: 2px solid black;
+}
+
+.imgWithTitle p{
+  font-size: 0.8rem;
+  margin:3px;
+  padding:0px;
+  position:relative;
+  right:-1px;
+}
 
 /* Main Section Stop */
 

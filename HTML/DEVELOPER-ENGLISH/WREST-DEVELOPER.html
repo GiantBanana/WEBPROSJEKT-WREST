@@ -17,28 +17,95 @@ $GLOBALS['side'] = "dev"; ?>-->
 
     <section role="main">
         <h1>WRest Documentation</h1>
+        <div class="imgWithTitle">
+            <img src="../../Images/illustration1.png" alt="Arrow from Browser icons to server icon showing sending of information" />
+            <p>Arrow from Browser icons to server icon showing sending of information</p>
+        </div>
         <p>
-          <abbr title="Wcag request standard">WRest</abbr>(Wcag request standard) is an accessebility protocol for use with the Wcag standard or as a stand alone customization alternative. By serving this information booth on the server side and client side it's easy to costomize your webpage for the user without having the user request it per site. <br/>
+            <abbr title="Wcag request standard">WRest</abbr>(Wcag request standard) is an accessebility protocol for use with the Wcag standard or as a stand alone customization alternative. By serving this information booth on the server side and client
+            side it's easy to costomize your webpage for the user without having the user request it per site. <br/>
+          The json input from wRest is as follows
         </p>
-          <h2> Server Side </h2>
-          <p>
-            The request is sendt with the <abbr title="Hyper text markup language header">HTTP Headers</abbr>, so by using standard php or other serverside language you can easily get the infromation with the request <xmp><?php echo'<?php
+<code lang="json">{
+  "highcontrast":"on",
+  "plainText":"on",
+  "screenReader":"off"
+}
+</code>
+        <h2> Server Side </h2>
+        <p>
+            The request is sendt with the <abbr title="Hyper text markup language header">HTTP Headers</abbr>, so by using standard php or other serverside language you can easily get the infromation with the request</p>
+
+<code lang="php"><?php echo'&lt;?php
 //Get the WRest Json config file
-foreach(getallheaders() as $name => $value){
+$wRestConfig;
+foreach(getallheaders() as $name =&gt; $value){
 	if($name == "Wrest"){
-		echo "<h1> your Wrest code is " . $value . " !!! wop wop </h1>";
+		echo "your Wrest code is " . $value;
+                $wRestConfig = json_decode($value, true);
 	}
 }
-?>';?></xmp>
-          </P>
-          <h2> Runtime </h2>
-          <p>
-          By implementing the div tag with name "<strong>wRESTConf</strong>" will the browser know where to put the json config object, and you can then use javascript to access it during runtime <br/><xmp><!-- Here the JSON information from WRest will appear -->
-<div hidden id="wRESTConf">  </div></xmp><br/>
+?&gt;';?>
+</code>
+<p>
+  Running this code will allow <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr> to find and process the wRest tag in the HTTP header, and its now stored in the <smallcode>$wRestConfig</smallcode> variable, and if we do a <smallcode>var_dump($wRestConfig);</smallcode> we get this output. </p>
+  <code lang="php">array(3) {
+  ["highcontrast"]=> string(2) "on"
+  ["plainText"]=> string(2) "on"
+  ["screenReader"]=> string(3) "off"
+} </code>
+<p>
+  At this point you can check the users needs and do approriate actions to accommodate the users need, making it smoother for booth user and developer.
+</p>
+  <h2> Example Php </h2>
+    <p> In this example we show how you can load a seprate CSS for users requesting high constrast pages.</p>
+<code lang="php">
+&lt;head&gt;
+  &lt;?php
+  $wRestConfig;
+  // Getting http wRest header
+  foreach(getallheaders() as $name =&gt; $value){
+  	if($name == "Wrest"){
+            $wRestConfig = json_decode($value, true);
+  	}
+  }
+  // Checking if user requested highcontrast
+  if($wRestConfig['highconstrast'] == "on"){  ?&gt;
+    &lt;link href="highconstrast.css" rel="stylesheet" type="text/css"&gt;
+    &lt;?php    }else{    ?&gt;
+    &lt;link href="normal.css" rel="stylesheet" type="text/css"&gt;
+    &lt;?php    }        ?&gt;
+&lt;/head&gt;
 
+</code>
+
+
+
+
+
+
+
+
+
+        <h2> Runtime </h2>
+        <p>
+            By implementing the div tag with name "<strong>wRESTConf</strong>" will the browser know where to put the json config object, and you can then use javascript to access it during runtime <br/>
+
+<code lang="html">&lt;div hidden id="wRESTConf"&gt;
+&lt;!-- Here the JSON information from
+WRest will appear --&gt; &lt;/div&gt;
+</code>
+<br/>
+
+<h3>Read from the Wrest div tag</h3>
+<code lang="javascript">var wrestConfig;
+document.addEventListener("DOMContentLoaded", function(event) {
+  wrestConfig = JSON.parse(document.getElementById("wRestConf").innerHTML);
+});
+</code>
         </p>
 
-      </section>
+    </section>
 
     <?php getFooter();?>
 
