@@ -398,6 +398,7 @@ code[lang="json"]{
 
 .mainsectioncontainer h2 {
     font-size: 2em;
+    border-bottom:1px solid black;
 }
 
 .tableOfContents{
@@ -420,6 +421,7 @@ code[lang="json"]{
 .tableOfContents h2{
   margin-top:0px;
   margin-bottom:0px;
+  border:none;
   margin-left:1em;
   font-size:1.5em;
 
