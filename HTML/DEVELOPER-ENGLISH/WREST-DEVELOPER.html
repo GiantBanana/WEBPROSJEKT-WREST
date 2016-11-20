@@ -23,16 +23,30 @@ $GLOBALS['side'] = "dev"; ?>-->
         </div>
         <p>
             <abbr title="Wcag request standard">WRest</abbr>(Wcag request standard) is an accessebility protocol for use with the Wcag standard or as a stand alone customization alternative. By serving this information booth on the server side and client
-            side it's easy to costomize your webpage for the user without having the user request it per site. <br/>
-          The json input from wRest is as follows
+            side it's easy to costomize your webpage for the user without having the user request it per site. <br/></p>
+            <div class="tableOfContents">
+              <h1>Table of contents:</h1>
+              <br/>
+            <h2><a href="#serverSide">-Server Side</a></h2>
+            <br/>
+            <h3><a href="#ssexample">-Example</a></h3>
+            <br/>
+            <h2><a href="#runTime">-Runtime</a></h2>
+            <br/>
+            <h3><a href="#rtexample">-Read div tag</a></h3>
+            <br/>
+            </div>
+
+        <h2 id="serverSide"> Server Side </h2>
+        <p>
+                  The json input from wRest is as follows
         </p>
 <code lang="json">{
   "highcontrast":"on",
   "plainText":"on",
   "screenReader":"off"
 }
-</code>
-        <h2> Server Side </h2>
+        </code>
         <p>
             The request is sendt with the <abbr title="Hyper text markup language header">HTTP Headers</abbr>, so by using standard php or other serverside language you can easily get the infromation with the request</p>
 
@@ -57,7 +71,7 @@ foreach(getallheaders() as $name =&gt; $value){
 <p>
   At this point you can check the users needs and do approriate actions to accommodate the users need, making it smoother for booth user and developer.
 </p>
-  <h2> Example Php </h2>
+  <h3 id="ssexample"> Example Php </h3>
     <p> In this example we show how you can load a seprate CSS for users requesting high constrast pages.</p>
 <code lang="php">
 &lt;head&gt;
@@ -87,7 +101,7 @@ foreach(getallheaders() as $name =&gt; $value){
 
 
 
-        <h2> Runtime </h2>
+        <h2 id="runTime"> Runtime </h2>
         <p>
             By implementing the div tag with name "<strong>wRESTConf</strong>" will the browser know where to put the json config object, and you can then use javascript to access it during runtime <br/>
 
@@ -97,7 +111,7 @@ WRest will appear --&gt; &lt;/div&gt;
 </code>
 <br/>
 
-<h3>Read from the Wrest div tag</h3>
+<h3 id="rtexample">Read from the Wrest div tag</h3>
 <code lang="javascript">var wrestConfig;
 document.addEventListener("DOMContentLoaded", function(event) {
   wrestConfig = JSON.parse(document.getElementById("wRestConf").innerHTML);

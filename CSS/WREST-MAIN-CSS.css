@@ -66,6 +66,7 @@ code[lang="html"]{
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 10%;
+  background-color:rgb(233, 219, 209);
 }
 
 code[lang="javascript"]{
@@ -73,6 +74,7 @@ code[lang="javascript"]{
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 7%;
+  background-color:rgb(233, 232, 209);
 }
 
 code[lang="json"]{
@@ -80,6 +82,7 @@ code[lang="json"]{
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 10%;
+  background-color:rgb(233, 233, 233);
 }
 
 
@@ -394,7 +397,40 @@ code[lang="json"]{
 }
 
 .mainsectioncontainer h2 {
-    font-size: 1.5rem;
+    font-size: 2em;
+}
+
+.tableOfContents{
+
+  position:relative;
+  width:25%;
+
+}
+
+.tableOfContents h1{
+  margin-left:0em;
+  border:none;
+  font-weight: normal;
+  margin-bottom:0px;
+  margin-top:0px;
+  font-size:2em;
+
+}
+
+.tableOfContents h2{
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:1em;
+  font-size:1.5em;
+
+}
+
+.tableOfContents h3{
+  margin-top:0px;
+  margin-bottom:0px;
+  margin-left:4em;
+  font-size:1em;
+
 }
 
 .imgWithTitle{
