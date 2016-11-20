@@ -1,137 +1,134 @@
 <?php
 
 $lang = 'en';
-$dev = true;
+$dev = True;
 $side = 'home';
 
 $homeLinks = array(
-    'en' => '../USER-ENGLISH/WREST-MAIN-HOME.html',
-    'no' => '../USER-NORWEGIAN/WREST-HOME-NO.html',
-    'ny' => '../USER-NYNORSK/WREST-HOME-NY.html',
+    "en" => "../USER-ENGLISH/WREST-MAIN-HOME.html",
+    "no" => "../USER-NORWEGIAN/WREST-HOME-NO.html",
+    "ny" => "../USER-NYNORSK/WREST-HOME-NY.html",
 );
 
 $aboutLinks = array(
-    'en' => '../USER-ENGLISH/WREST-MAIN - ABOUT.html',
-    'no' => '../USER-NORWEGIAN/WREST-ABOUT-NO.html',
-    'ny' => '../USER-NYNORSK/WREST-ABOUT-NY.html',
+    "en" => "../USER-ENGLISH/WREST-MAIN - ABOUT.html",
+    "no" => "../USER-NORWEGIAN/WREST-ABOUT-NO.html",
+    "ny" => "../USER-NYNORSK/WREST-ABOUT-NY.html",
     );
 
 $devLinks = array(
-    'en' => '../DEVELOPER-ENGLISH/WREST-DEVELOPER.html',
-    'no' => '../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html',
-    'ny' => '../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html',
+    "en" => "../DEVELOPER-ENGLISH/WREST-DEVELOPER.html",
+    "no" => "../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html",
+    "ny" => "../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html",
     );
 
 $downloadLinks = array(
-  'en' => '../USER-ENGLISH/WREST-MAIN - DOWNLOAD.html',
-  'no' => '../USER-NORWEGIAN/WREST-DOWNLOAD-NO.html',
-  'ny' => '../USER-NYNORSK/WREST-DOWNLOAD-NY.html',
+  "en" => "../USER-ENGLISH/WREST-MAIN - DOWNLOAD.html",
+  "no" => "../USER-NORWEGIAN/WREST-DOWNLOAD-NO.html",
+  "ny" => "../USER-NYNORSK/WREST-DOWNLOAD-NY.html",
 );
 
 $devDocLinks = array(
-  'en' => '../DEVELOPER-ENGLISH/WREST-DEVELOPER.html',
-  'no' => '../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html',
-  'ny' => '../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html',
+  "en" => "../DEVELOPER-ENGLISH/WREST-DEVELOPER.html",
+  "no" => "../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html",
+  "ny" => "../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html",
 );
 
 $devGitLinks = array(
-  'en' => '../DEVELOPER-ENGLISH/WREST-DEVELOPER.html',
-  'no' => '../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html',
-  'ny' => '../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html',
+  "en" => "../DEVELOPER-ENGLISH/WREST-DEVELOPER.html",
+  "no" => "../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html",
+  "ny" => "../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html",
 );
 
 $linksRootFolders = array(
-  'en' => '../USER-ENGLISH/',
-  'no' => '../USER-NORWEGIAN/',
-  'ny' => '../USER-NYNORSK/',
+  "en" => "../USER-ENGLISH/",
+  "no" => "../USER-NORWEGIAN/",
+  "ny" => "../USER-NYNORSK/",
 );
 
 $linkUncomplete = array(
-  'en' => '../TOBECOMPLETED/EN.html',
-  'no' => '../TOBECOMPLETED/NO.html',
-  'ny' => '../TOBECOMPLETED/NY.html',
+  "en" => "../TOBECOMPLETED/EN.html",
+  "no" => "../TOBECOMPLETED/NO.html",
+  "ny" => "../TOBECOMPLETED/NY.html",
 );
 
 $devDocWords = array(
-  'en' => 'Documentation',
-  'no' => 'Dokumentasjon',
-  'ny' => 'Dokumantasjon',
+  "en" => "Documentation",
+  "no" => "Dokumentasjon",
+  "ny" => "Dokumantasjon",
 );
 
 $devGitWords = array(
-  'en' => 'SourceCode',
-  'no' => 'KildeKode',
-  'ny' => 'KjeldeKode',
+  "en" => "SourceCode",
+  "no" => "KildeKode",
+  "ny" => "KjeldeKode",
 );
 
 $homeWords = array(
-  'en' => 'Home',
-  'no' => 'Hjem',
-  'ny' => 'Heim',
+  "en" => "Home",
+  "no" => "Hjem",
+  "ny" => "Heim",
 );
 
 $aboutWords = array(
-  'en' => 'About',
-  'no' => 'Om wREST',
-  'ny' => 'Om wREST',
+  "en" => "About",
+  "no" => "Om wREST",
+  "ny" => "Om wREST",
 );
 
 $downloadWords = array(
-  'en' => 'Download',
-  'no' => 'Nedlastinger',
-  'ny' => 'Nedlastingar',
+  "en" => "Download",
+  "no" => "Nedlastinger",
+  "ny" => "Nedlastingar",
 );
 
 $userWords = array(
-  'en' => 'User',
-  'no' => 'Bruker',
-  'ny' => 'Brukar',
+  "en" => "User",
+  "no" => "Bruker",
+  "ny" => "Brukar",
 );
 
 $developerWords = array(
-  'en' => 'Developer',
-  'no' => 'Utvikler',
-  'ny' => 'Utviklar',
+  "en" => "Developer",
+  "no" => "Utvikler",
+  "ny" => "Utviklar",
 );
 
 $titles = array(
-    'en' => 'Wrest Wcag Requst Standard | EN | ',
-    'no' => 'Wrest Wcag Requst Standard | NO | ',
-    'ny' => 'Wrest Wcag Requst Standard | NY | ',
+    "en" => "Wrest Wcag Requst Standard | EN | ",
+    "no" => "Wrest Wcag Requst Standard | NO | ",
+    "ny" => "Wrest Wcag Requst Standard | NY | ",
     );
 
 $skipToContentWords = array(
-  'en' => 'Skip to Content',
-  'no' => 'Hopp til hovedinnhold',
-  'ny' => 'Hopp til hovedinhald',
+  "en" => "Skip to Content",
+  "no" => "Hopp til hovedinnhold",
+  "ny" => "Hopp til hovedinhald",
 
 );
 
-function getTitle()
-{
+function getTitle(){
     echo $GLOBALS['titles'][$GLOBALS['lang']];
 }
 
-function getCurrentPageInLang($newlang)
-{
-    switch ($GLOBALS['side']) {
-        case 'home':
+function getCurrentPageInLang($newlang){
+    switch($GLOBALS['side']){
+        case "home":
             return $GLOBALS['homeLinks'][$newlang];
             break;
-        case 'about':
+        case "about":
             return $GLOBALS['aboutLinks'][$newlang];
             break;
-        case 'download':
+        case "download":
             return $GLOBALS['downloadLinks'][$newlang];
             break;
-        case 'dev':
+        case "dev":
             return $GLOBALS['devLinks'][$newlang];
             break;
     }
 }
 
-function getImports()
-{
+function getImports(){
     ?>
     <meta charset="utf-8">
     <meta name="HTML Start Template" content="A Start Out Template for HTML Files">
@@ -151,30 +148,23 @@ function getImports()
     60 vmax     | % of max vertical viewport
     -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-          <link rel="shortcut icon" type="image/png" href="../../Images/Logos/WREST_LOGO_LARGE.png"/>
+        <link rel="shortcut icon" type="image/png" href="../../Images/Logos/WREST_LOGO_LARGE.png"/>
         <?php
-
 }
 
-function setLang($newlang)
-{
+function setLang($newlang){
     $GLOBALS['lang'];
 }
 
-function getHeader()
-{
-    ?>
+function getHeader(){?>
             <div id="skip-link">
                 <a tabindex="1" href="#content">
-                    <?php echo $GLOBALS['skipToContentWords'][$GLOBALS['lang']]; ?>
+                    <?php echo $GLOBALS['skipToContentWords'][$GLOBALS['lang']];?>
                 </a>
             </div>
             <div class="bodycontainer">
                 <div class="bannercontainer">
-                  <a href="<?php echo $GLOBALS['homeLinks'][$GLOBALS['lang']]; ?>">
                     <img src="../../Images/Logos/WREST_LOGO_LARGE.png" role="banner" alt="WREST company logo." />
-                  </a>
                 </div>
                 <div class="languagenav">
                     <nav role="navigation" tabindex="-1">
@@ -191,28 +181,25 @@ function getHeader()
                                 <a href="
 
     <?php
-    echo getCurrentPageInLang('no'); ?>
-    " <?php if ($GLOBALS[ 'lang'] === 'no') {
-        echo 'class="selectedLang"';
-    } ?>>
+    echo getCurrentPageInLang('no');
+    ?>
+    " <?php if($GLOBALS[ 'lang']==='no' ){echo 'class="selectedLang"';} ?>>
                                         <img src="../../Images/Icons/NO.png" alt="Trykk her for norsk" />Norsk</a>
                             </li>
                             <li>
                                 <a href="
     <?php
-    echo getCurrentPageInLang('ny'); ?>
-    " <?php if ($GLOBALS[ 'lang'] === 'ny') {
-        echo 'class="selectedLang"';
-    } ?>><img src="../../Images/Icons/NO.png" alt="Trykk her for nynorsk" />Nynorsk</a>
+    echo getCurrentPageInLang('ny');
+    ?>
+    " <?php if($GLOBALS[ 'lang']==='ny' ){echo 'class="selectedLang"';} ?>><img src="../../Images/Icons/NO.png" alt="Trykk her for nynorsk" />Nynorsk</a>
                             </li>
                             <li>
                                 <a href="
     <?php
-    echo getCurrentPageInLang('en'); ?>
+    echo getCurrentPageInLang('en');
+    ?>
 
-    " <?php if ($GLOBALS[ 'lang'] === 'en') {
-        echo 'class="selectedLang"';
-    } ?>><img src="../../Images/Icons/GB.png" alt="Click here for English" />English</a>
+    " <?php if($GLOBALS[ 'lang']==='en' ){echo 'class="selectedLang"';} ?>><img src="../../Images/Icons/GB.png" alt="Click here for English" />English</a>
                             </li>
                         </ul>
                     </nav>
@@ -221,13 +208,14 @@ function getHeader()
                     <nav role="navigation">
                         <ul>
                             <?php
-     if ($GLOBALS['dev']) {
-         echo '<li><a href="'.$GLOBALS['homeLinks'][$GLOBALS['lang']].'" id="developertabactive">'.$GLOBALS['userWords'][$GLOBALS['lang']].'</a></li
-        ><li><a href="' .$GLOBALS['devLinks'][$GLOBALS['lang']].'" id="notactive">'.$GLOBALS['developerWords'][$GLOBALS['lang']].'</a></li>';
-     } else {
-         echo '<li><a href="'.$GLOBALS['homeLinks'][$GLOBALS['lang']].'" id="notactive">'.$GLOBALS['userWords'][$GLOBALS['lang']].'</a></li
-        ><li><a href="' .$GLOBALS['devLinks'][$GLOBALS['lang']].'" id="developertabactive">'.$GLOBALS['developerWords'][$GLOBALS['lang']].'</a></li>';
-     } ?>
+     if($GLOBALS['dev']){
+        echo '<li><a href="' . $GLOBALS['homeLinks'][$GLOBALS['lang']] . '" id="developertabactive">' . $GLOBALS['userWords'][$GLOBALS['lang']] . '</a></li
+        ><li><a href="' . $GLOBALS['devLinks'][$GLOBALS['lang']] . '" id="notactive">' . $GLOBALS['developerWords'][$GLOBALS['lang']] . '</a></li>';
+        }  else {
+            echo '<li><a href="' . $GLOBALS['homeLinks'][$GLOBALS['lang']] . '" id="notactive">' . $GLOBALS['userWords'][$GLOBALS['lang']] . '</a></li
+        ><li><a href="' . $GLOBALS['devLinks'][$GLOBALS['lang']] . '" id="developertabactive">' . $GLOBALS['developerWords'][$GLOBALS['lang']] . '</a></li>';
+        }
+    ?>
                         </ul>
                     </nav>
                 </div>
@@ -243,10 +231,10 @@ function getHeader()
             Sauce: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
             -->
             <?php
-              if ($GLOBALS['dev']) {
-                  ?>
+              if($GLOBALS['dev']){
+                ?>
                 <li>
-                    <a href="<?php $GLOBALS['devDocLinks'][$GLOBALS['lang']]; ?>">
+                    <a href="<?php $GLOBALS['devDocLinks'][$GLOBALS['lang']];?>">
                         <?php echo $GLOBALS['devDocWords'][$GLOBALS['lang']]; ?>
                     </a>
                 </li>
@@ -264,30 +252,26 @@ function getHeader()
         </nav>
     </div>
             <?php
-
-              } else {
-                  ?>
+              }
+              else{?>
                             <li>
                                 <a
-                                <?php if ($GLOBALS['side'] == 'home') {
-                      ?>class="currentPage"<?php
-                  } ?>
-                                 href="<?php $GLOBALS['homeLinks'][$GLOBALS['lang']]; ?>">
+                                <?php if($GLOBALS['side'] == "home"){
+                                ?>class="currentPage"<?php }?>
+                                 href="<?php $GLOBALS['homeLinks'][$GLOBALS['lang']];?>">
                                     <?php echo $GLOBALS['homeWords'][$GLOBALS['lang']]; ?>
                                 </a>
                             </li>
                             <li>
-                                <a <?php if ($GLOBALS['side'] == 'about') {
-                      ?>class="currentPage"<?php
-                  } ?>
+                                <a <?php if($GLOBALS['side'] == "about"){
+                                ?>class="currentPage"<?php }?>
                                 href="<?php echo $GLOBALS['aboutLinks'][$GLOBALS['lang']]; ?>">
                                     <?php echo $GLOBALS['aboutWords'][$GLOBALS['lang']]; ?>
                                 </a>
                             </li>
                             <li>
-                                <a <?php if ($GLOBALS['side'] == 'download') {
-                      ?>class="currentPage"<?php
-                  } ?>
+                                <a <?php if($GLOBALS['side'] == "download"){
+                                ?>class="currentPage"<?php }?>
                                 href="<?php echo $GLOBALS['downloadLinks'][$GLOBALS['lang']]; ?>">
                                     <?php echo $GLOBALS['downloadWords'][$GLOBALS['lang']]; ?>
                                 </a>
@@ -295,18 +279,14 @@ function getHeader()
                         </ul>
                     </nav>
                 </div>
-                <?php
-              } ?>
+                <?php }?>
                 <div class="mainsectioncontainer">
                     <section role="main" id="content">
                         <?php
-
 }
 
-function getFooter()
-{
-    if ($GLOBALS['lang'] == 'no') {
-        ?>
+function getFooter(){
+    if($GLOBALS['lang'] == 'no'){?>
                     </section>
                 </div>
                 <div class="footercontainer">
@@ -340,9 +320,8 @@ function getFooter()
                 </div>
             </div>
             <?php
-
-    } elseif ($GLOBALS['lang'] == 'en') {
-        ?>
+          }else if($GLOBALS['lang'] == 'en'){
+            ?>
                 </section>
                 </div>
                 <div class="footercontainer">
@@ -377,9 +356,8 @@ function getFooter()
                 </div>
 
                 <?php
-
-    } elseif ($GLOBALS['lang'] == 'ny') {
-        ?>
+          }else if($GLOBALS['lang'] == 'ny'){
+            ?>
                     </section>
                     </div>
                     <div class="footercontainer">
@@ -413,7 +391,6 @@ function getFooter()
                     </div>
                     </div>
                     <?php
-
-    }
+          }
 }
 ?>

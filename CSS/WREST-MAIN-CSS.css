@@ -316,8 +316,15 @@ xmp{
 
     }
 
+.currentPage {
+    background-color: #1E5E50;
+    border-bottom: 1px solid white;
+    padding:4px;
+}
+
 .mainnavcontainer a:focus {
     background-color: #1E5E50;
+
 }
 
 #mainnavactive {
