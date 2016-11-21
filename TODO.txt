@@ -4,8 +4,8 @@ TODO 21.11.2016:
 [ ] TODO Rein: Fylle ut About page NY
 
 [X] TODO Lukas: Fylle ut Dev page EN
-[ ] TODO Lukas: Fylle ut Dev page NO
-[ ] TODO Lukas: Fylle ut Dev page NY
+[X] TODO Lukas: Fylle ut Dev page NO
+[X] TODO Lukas: Fylle ut Dev page NY
 
 [ ] TODO Isak: Fylle ut Home page EN
 [ ] TODO Isak: Fylle ut Home page NO

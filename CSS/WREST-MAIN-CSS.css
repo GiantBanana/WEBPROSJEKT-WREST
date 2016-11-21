@@ -54,14 +54,14 @@ code{
   padding:1vmin;
 }
 
-code[lang="php"]{
+code[codelang="php"]{
   background-image: url("../Images/Logos/PHP.png");
   background-repeat: no-repeat;
   background-position: top right;
   background-size: 10%;
 }
 
-code[lang="html"]{
+code[codelang="html"]{
   background-image: url("../Images/Logos/html5.png");
   background-repeat: no-repeat;
   background-position: top right;
@@ -69,7 +69,7 @@ code[lang="html"]{
   background-color:rgb(233, 219, 209);
 }
 
-code[lang="javascript"]{
+code[codelang="javascript"]{
   background-image: url("../Images/Logos/javascript.png");
   background-repeat: no-repeat;
   background-position: top right;
@@ -77,7 +77,7 @@ code[lang="javascript"]{
   background-color:rgb(233, 232, 209);
 }
 
-code[lang="json"]{
+code[codelang="json"]{
   background-image: url("../Images/Logos/json.png");
   background-repeat: no-repeat;
   background-position: top right;

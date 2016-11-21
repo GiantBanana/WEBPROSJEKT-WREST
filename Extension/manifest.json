@@ -3,7 +3,7 @@
 
   "name": "wREST",
   "description": "This extension helps the page know how to present itself to you",
-  "version": "1.0",
+  "version": "1.1",
   "background":{
     "scripts" :["background.js"],
     "persistent" : true
