@@ -11,4 +11,8 @@ TODO 21.11.2016:
 [ ] TODO Isak: Fylle ut Home page NO
 [ ] TODO Isak: Fylle ut Home page NY
 
+[ ] TODO : Lage forms for Contribute stuff footer
+[ ] TODO : Lage Guides for User support stuff footer
+[ ] TODO : Lage stuff for Sources i footer
+
 TODO 22.11.2016:
