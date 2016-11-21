@@ -262,12 +262,12 @@ function getHeader()
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo $GLOBALS['downloadLinks'][$GLOBALS['lang']]; ?>">
+                    <a class="externalLink" href="<?php echo $GLOBALS['downloadLinks'][$GLOBALS['lang']]; ?>">
                         <?php echo $GLOBALS['downloadWords'][$GLOBALS['lang']]; ?>
                     </a>
                 </li>
                 <li>
-                    <a href="http://www.passeride.com">
+                    <a class="externalLink" href="http://www.passeride.com">
                         <?php echo $GLOBALS['demoPageWords'][$GLOBALS['lang']]; ?>
                     </a>
                 </li>
@@ -296,9 +296,7 @@ function getHeader()
                                 </a>
                             </li>
                             <li>
-                                <a <?php if ($GLOBALS['side'] == 'download') {
-                      ?>class="currentPage"<?php
-                  } ?>
+                                <a class="externalLink"
                                 href="<?php echo $GLOBALS['downloadLinks'][$GLOBALS['lang']]; ?>">
                                     <?php echo $GLOBALS['downloadWords'][$GLOBALS['lang']]; ?>
                                 </a>

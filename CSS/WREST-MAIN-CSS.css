@@ -94,7 +94,7 @@ code[lang="json"]{
     background-color: #D5E8E4;
     height: 20%;
     width: 100%;
-    z-index: 1;
+    z-index: -2;
 }
 
 .bannercontainer img {
@@ -208,6 +208,7 @@ code[lang="json"]{
     z-index: 2;
     right: 20em;
     bottom: 25px;
+    z-index:0;
 }
 
 @-moz-document url-prefix() {
@@ -347,9 +348,17 @@ code[lang="json"]{
 
 }
 
+.mainnavcontainer .externalLink {
+  background-image:url("../Images/Icons/external.png");
+  background-repeat: no-repeat;
+  background-position: top right;
+  background-size: 10%;
+
+}
+
 .mainnavcontainer a:hover {
     background-color: #1E5E50;
-     padding-bottom: 4px;  /* rein */
+    padding-bottom: 4px;  /* rein */
     padding-top: 4px;   /* rein*/
 
     }
