@@ -1,8 +1,8 @@
 document.addEventListener("DOMContentLoaded", function(event) {
-  console.log("DOM fully loaded and parsed");
-  root = document.querySelector(":root");
-  populateJavascriptFunctionKeys();
-  readCookie();
+  //console.log("DOM fully loaded and parsed");
+  //root = document.querySelector(":root");
+  //populateJavascriptFunctionKeys();
+  //readCookie();
 });
 var root;
 var fontSize = 16;

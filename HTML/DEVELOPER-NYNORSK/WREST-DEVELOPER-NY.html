@@ -16,16 +16,109 @@ $GLOBALS['side'] = "dev"; ?>-->
     <?php getHeader();?>
 
         <section role="main">
-            <h1>Lorem Ipsum</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum sed ligula placerat, sollicitudin metus ac, lobortis orci. Donec odio odio, porttitor at dolor sed, consectetur dapibus ex. Duis quis urna enim. In interdum, purus non euismod consectetur, purus mauris pellentesque augue, ac vestibulum magna neque eget tortor. Suspendisse dui metus, rhoncus a venenatis eget, facilisis nec nisi. Praesent sit amet nunc eu risus pharetra blandit. Mauris ac finibus turpis.
-                <br>
-                <br> Sed non neque sit amet diam pharetra condimentum quis sed sem. Aenean volutpat felis non neque malesuada, ut dapibus nulla dapibus. Pellentesque nec ante eget nisl efficitur consectetur eu sed mauris. Suspendisse pretium tempus enim, sed consectetur justo suscipit in. Nunc porttitor posuere blandit. Vivamus eget egestas arcu. Sed ut sodales nisl. Mauris et molestie mauris, non pharetra neque. Suspendisse eu dignissim leo. Integer eget nulla feugiat, faucibus massa tempus, sagittis justo. Fusce sollicitudin nibh mauris, at eleifend ipsum tincidunt eget. Curabitur efficitur, odio malesuada tincidunt aliquam, erat lorem sollicitudin nibh, sagittis pharetra leo nunc vel tortor. Suspendisse quis ex id odio tempor faucibus id nec massa. Nunc vulputate, magna at gravida congue, risus orci maximus mauris, eget dapibus dui nisl non nisi.
-                <br>
-                <br> Duis ut neque condimentum, ultricies nisl ut, mattis leo. Donec consequat hendrerit sapien, eget tincidunt urna viverra porta. Proin vel justo mollis, ornare leo in, placerat velit. Sed malesuada semper sem, non ullamcorper sapien aliquet vel. Sed elementum eu magna sit amet posuere. Sed a mauris risus. Suspendisse pharetra eu quam a viverra. In feugiat suscipit mauris a accumsan. Integer ipsum ante, ornare vitae porttitor vel, suscipit quis libero.
-                <br>
-                <br> Nullam sem quam, egestas et metus ac, dictum malesuada massa. Duis porta ac felis a consequat. Nulla facilisi. Phasellus eu risus et arcu accumsan maximus a eu felis. Sed aliquam tortor vel felis sodales, vitae ornare eros ullamcorper. Nullam eget dignissim massa. Suspendisse lobortis iaculis erat. Duis facilisis libero vitae metus euismod, ac cursus est sodales.
-                <br>
-                <br> Etiam nec justo eget erat venenatis tincidunt et et mi. Nulla ornare tortor non hendrerit viverra. Proin vitae placerat lacus, in tincidunt sapien. Praesent at ipsum metus. Proin fermentum felis dui, at lacinia neque vestibulum vel. Morbi elementum, nisi eu vestibulum mollis, elit leo vulputate nisl, sed laoreet lectus quam vitae tortor. Aenean consectetur bibendum dapibus. Mauris neque ex, porttitor at arcu eu, tristique pretium neque. Suspendisse eu tempus purus, facilisis dignissim nibh. Fusce pharetra felis id quam venenatis iaculis. Aliquam ac est auctor, scelerisque urna scelerisque, sodales nibh.</p>
+          <h1 tabindex="0">WRest Dokumentasjon</h1>
+          <div class="imgWithTitle">
+              <img tabindex="0" src="../../Images/illustration1.png" alt="Pil fra nettleser ikon til netttjener ikon, symboliserer sending av informasjon." />
+              <p>Pil fra nettleser ikon til netttjener ikon, symboliserer sending av informasjon.</p>
+          </div>
+          <p tabindex="0">
+              <abbr title="Wcag request standard">WRest</abbr>(Wcag request standard)
+              er en tilretteleggingsprotokol for å bruke med WCag standarden eller alene for å gi bruker mulighet til å tilpasset nettstedet sine behov. Ved å gjøre brukerns infromasjon tilgjengelig både på tjenersiden og clientsiden håper vi å tilby en fleksibel løsning for utviklere og brukere, da de slipper å spesifisere tilpassingen for hver nettside.<br/></p>
+          <div class="tableOfContents">
+              <h1 tabindex="0">Innholdsfortegnelse:</h1>
+              <br/>
+              <h2><a href="#serverSide">-Netttjener</a></h2>
+              <br/>
+              <h3><a href="#ssexample">-Eksempel</a></h3>
+              <br/>
+              <h2><a href="#runTime">-Nettleseren</a></h2>
+              <br/>
+              <h3><a href="#rtexample">-Les div knagg</a></h3>
+              <br/>
+              <h2><a href="#wcagandaccessebility">-Steg videre</a></h2>
+          </div>
+
+          <h2 id="serverSide" tabindex="0"> Netttjener </h2>
+          <p tabindex="0">
+              wRest gir informasjon i "JSON" formattet og ser slik ut.
+          </p>
+          <code lang="json" tabindex="0">{
+  "highcontrast":"on",
+  "plainText":"on",
+  "screenReader":"off"
+  }
+        </code>
+          <p tabindex="0">
+              Forespørselen er sendt via <abbr title="Hyper text markup language header">"HTTP Headers"</abbr>, ved å bruke PHP eller annen form for standard tjenerside prossessering, er det enkelt å hente ut informasjonen brukere har sendt. </p>
+
+          <code lang="php" tabindex="0"><?php echo'&lt;?php
+  //Get the WRest Json config file
+  $wRestConfig;
+  foreach(getallheaders() as $name =&gt; $value){
+  if($name == "Wrest"){
+    echo "your Wrest code is " . $value;
+                $wRestConfig = json_decode($value, true);
+  }
+  }
+  ?&gt;';?>
+  </code>
+          <p tabindex="0">
+              Denne koden vil la <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr>
+              identifisere og prossesere wRest informasjonen og lagre den i variablen <smallcode>$wRestConfig</smallcode>, og om vi da kjører koden <smallcode>var_dump($wRestConfig);</smallcode> får vi følgende utskrift. </p>
+          <code lang="php" tabindex="0">array(3) {
+  ["highcontrast"]=> string(2) "on"
+  ["plainText"]=> string(2) "on"
+  ["screenReader"]=> string(3) "off"
+  } </code>
+          <p tabindex="0">
+            Nå kan vi se hva brukerns behov er og gjøre handligner for å gjøre opplevelsen bedre for brukern. Og mindre hodebry for Utvikler.
+          </p>
+          <h3 id="ssexample" tabindex="0"> Eksempel Php </h3>
+          <p tabindex="0">
+            I dette eksempelet viser vi hvordan du kan laste to forskjellige CSS filer bassert på om bruker har etterspurt høy kontrast på siden din. </p>
+          <code lang="php" tabindex="0">
+  &lt;head&gt;
+  &lt;?php
+  $wRestConfig;
+  // Getting http wRest header
+  foreach(getallheaders() as $name =&gt; $value){
+    if($name == "Wrest"){
+            $wRestConfig = json_decode($value, true);
+    }
+  }
+  // Checking if user requested highcontrast
+  if($wRestConfig['highconstrast'] == "on"){  ?&gt;
+    &lt;link href="highconstrast.css" rel="stylesheet" type="text/css"&gt;
+    &lt;?php    }else{    ?&gt;
+    &lt;link href="normal.css" rel="stylesheet" type="text/css"&gt;
+    &lt;?php    }        ?&gt;
+  &lt;/head&gt;
+
+  </code>
+
+          <h2 id="runTime" tabindex="0"> Nettleser </h2>
+          <p tabindex="0">
+            Ved å legge til en div knagg med navnet "<strong>wRESTConf</strong>", kan nettleseren vite hvor den skal plassere wRest informasjonen (JSon objekt), slik at javascript kan få tilgang og gjøre tilpassninger.  <br/>
+          </p>
+          <code lang="html" tabindex="0">&lt;div hidden id="wRESTConf"&gt;
+  &lt;!-- Here the JSON information from
+  WRest will appear --&gt; &lt;/div&gt;
+  </code>
+          <br/>
+
+          <h3 id="rtexample" tabindex="0">Les fra div knagg</h3>
+          <code lang="javascript" tabindex="0">var wrestConfig;
+  document.addEventListener("DOMContentLoaded", function(event) {
+  wrestConfig = JSON.parse(document.getElementById("wRestConf").innerHTML);
+  });
+  </code>
+
+          <h2 id="wcagandaccessebility" tabindex="0">Steg videre</h2>
+          <p tabindex="0">
+            Når du har implementert wRest i din nettside så vil vi anbefale deg og se på
+  <a href="https://www.w3.org/WAI/intro/wcag.php">wcag's hjemmeside</a> eller se vår <a href="../../Documents/10Wcag.pdf">forenklede 10 punks liste.(Eng)(PDF) </a>
+          </p>
+
         </section>
 
     <?php getFooter();?>
