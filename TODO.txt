@@ -1,20 +1,14 @@
-TODO:
+TODO 21.11.2016:
+[ ] TODO Rein: Fylle ut About page NO
+[ ] TODO Rein: Fylle ut About page EN
+[ ] TODO Rein: Fylle ut About page NY
 
-TODO: Fylle ut Brødtext på sidene
-  -eng
-      -home
-      -about
-      -download
-  -no
-      -home
-      -about
-      -download
-  -ny
-      -home
-      -about
-      -download
+[X] TODO Lukas: Fylle ut Dev page EN
+[ ] TODO Lukas: Fylle ut Dev page NO
+[ ] TODO Lukas: Fylle ut Dev page NY
 
-TODO: Fylle ut text for dev
-  Fylle text (Lukas)
-  Lage dokumentation (Lukas)
-  
+[ ] TODO Isak: Fylle ut Home page EN
+[ ] TODO Isak: Fylle ut Home page NO
+[ ] TODO Isak: Fylle ut Home page NY
+
+TODO 22.11.2016:
