@@ -251,12 +251,17 @@ function getHeader()
               if ($GLOBALS['dev']) {
                   ?>
                 <li>
-                    <a href="<?php echo $GLOBALS['devDocLinks'][$GLOBALS['lang']]; ?>">
+                    <a <?php if ($GLOBALS['side'] == 'dev') {
+          ?>class="currentPage"<?php
+      } ?> href="<?php echo $GLOBALS['devDocLinks'][$GLOBALS['lang']]; ?>">
                         <?php echo $GLOBALS['devDocWords'][$GLOBALS['lang']]; ?>
                     </a>
                 </li>
                 <li>
-                    <a href="<?php echo $GLOBALS['linkUncomplete'][$GLOBALS['lang']]; ?>">
+                    <a
+                    <?php if ($GLOBALS['side'] == 'tobe') {
+          ?>class="currentPage"<?php
+      } ?>href="<?php echo $GLOBALS['linkUncomplete'][$GLOBALS['lang']]; ?>">
                         <?php echo $GLOBALS['devGitWords'][$GLOBALS['lang']]; ?>
                     </a>
                 </li>

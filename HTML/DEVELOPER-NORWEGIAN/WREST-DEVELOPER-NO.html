@@ -19,13 +19,12 @@ $GLOBALS['side'] = "dev"; ?>-->
         <h1 tabindex="0">wREST Dokumentasjon</h1>
         <div class="imgWithTitle">
             <img tabindex="0" src="../../Images/illustration1.png" alt="Pil fra nettleser ikon til netttjener ikon, symboliserer sending av informasjon." />
-            <p>Pil fra nettleser ikon til nettjener ikon, symboliserer sending av informasjon.</p>
         </div>
         <p tabindex="0">
             <abbr title="Wcag request standard">wREST</abbr>(WCAG Request Standard)
-            er en tilretteleggingsprotokol for å bruke med WCAG-standarden eller alene for å gi 
-			bruker mulighet til å tilpasset nettstedet sine behov. Ved å gjøre brukerns infromasjon 
-			tilgjengelig både på tjenersiden og clientsiden håper vi å tilby en fleksibel løsning 
+            er en tilretteleggingsprotokol for å bruke med WCAG-standarden eller alene for å gi
+			bruker mulighet til å tilpasset nettstedet sine behov. Ved å gjøre brukerns infromasjon
+			tilgjengelig både på tjenersiden og clientsiden håper vi å tilby en fleksibel løsning
 			for utviklere og brukere, da de slipper å spesifisere tilpassingen for hver nettside.<br/></p>
         <div class="tableOfContents">
             <h1 tabindex="0">Innholdsfortegnelse:</h1>
@@ -52,8 +51,8 @@ $GLOBALS['side'] = "dev"; ?>-->
 }
       </code>
         <p tabindex="0">
-            Forespørselen er sendt via <abbr title="Hyper text markup language header">"HTTP Headers"</abbr>, 
-			ved å bruke PHP eller annen form for standard tjenerside-prossessering, er det enkelt å hente 
+            Forespørselen er sendt via <abbr title="Hyper text markup language header">"HTTP Headers"</abbr>,
+			ved å bruke PHP eller annen form for standard tjenerside-prossessering, er det enkelt å hente
 			ut informasjonen brukere har sendt. </p>
 
         <code lang="php" tabindex="0"><?php echo'&lt;?php
@@ -76,7 +75,7 @@ if($name == "wREST"){
 ["screenReader"]=> string(3) "off"
 } </code>
         <p tabindex="0">
-          Nå kan vi se hva brukerns behov er og gjøre handligner for å gjøre opplevelsen bedre for 
+          Nå kan vi se hva brukerns behov er og gjøre handligner for å gjøre opplevelsen bedre for
 		  brukeren. Og mindre hodebry for Utvikler.
         </p>
         <h3 id="ssexample" tabindex="0"> Eksempel Php </h3>
@@ -104,8 +103,8 @@ if($wRESTConfig['highconstrast'] == "on"){  ?&gt;
 
         <h2 id="runTime" tabindex="0"> Nettleser </h2>
         <p tabindex="0">
-          Ved å legge til en div knagg med navnet "<strong>wRESTConf</strong>", kan nettleseren vite 
-		  hvor den skal plassere wREST informasjonen (JSon objekt), slik at javascript kan få 
+          Ved å legge til en div knagg med navnet "<strong>wRESTConf</strong>", kan nettleseren vite
+		  hvor den skal plassere wREST informasjonen (JSon objekt), slik at javascript kan få
 		  tilgang og gjøre tilpasninger.<br/>
         </p>
         <code lang="html" tabindex="0">&lt;div hidden id="wRESTConf"&gt;

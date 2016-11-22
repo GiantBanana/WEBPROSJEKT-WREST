@@ -19,12 +19,11 @@ $GLOBALS['side'] = "dev"; ?>-->
         <h1 tabindex="0">wREST Documentation</h1>
         <div class="imgWithTitle">
             <img tabindex="0" src="../../Images/illustration1.png" alt="Arrow from Browser icons to server icon showing sending of information" />
-            <p>Arrow from Browser icons to server icon showing sending of information</p>
         </div>
         <p tabindex="0">
-            <abbr title="WCAG request standard">wREST</abbr>(WCAG Request Standard) is an accessibility 
-			protocol for use with the WCAG-standard or as a stand alone customization alternative. By 
-			serving this information both on the server side and client side it's easy to customize 
+            <abbr title="WCAG request standard">wREST</abbr>(WCAG Request Standard) is an accessibility
+			protocol for use with the WCAG-standard or as a stand alone customization alternative. By
+			serving this information both on the server side and client side it's easy to customize
 			your webpage for the user without having the user request it per site. <br/></p>
             <div class="tableOfContents">
               <h1 tabindex="0">Table of Contents:</h1>
@@ -65,8 +64,8 @@ foreach(getallheaders() as $name =&gt; $value){
 ?&gt;';?>
 </code>
 <p tabindex="0">
-  Running this code will allow <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr> to find and process 
-  the wREST tag in the HTTP header, and its now stored in the <smallcode>$wRestConfig</smallcode> variable, 
+  Running this code will allow <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr> to find and process
+  the wREST tag in the HTTP header, and its now stored in the <smallcode>$wRestConfig</smallcode> variable,
   and if we do a <smallcode>var_dump($wRestConfig);</smallcode> we get this output: </p>
   <code lang="php" tabindex="0">array(3) {
   ["highcontrast"]=> string(2) "on"
@@ -74,7 +73,7 @@ foreach(getallheaders() as $name =&gt; $value){
   ["screenReader"]=> string(3) "off"
 } </code>
 <p tabindex="0">
-  At this point you can check the users needs and do appropriate actions to accommodate these 
+  At this point you can check the users needs and do appropriate actions to accommodate these
   needs, making it smoother for booth user and developer.
 </p>
   <h3 id="ssexample" tabindex="0"> Example Php </h3>
@@ -126,8 +125,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         <h2 id="wcagandaccessebility" tabindex="0">WCAG and accessibility</h2>
         <p tabindex="0">
-          When you have successfully implemented wREST in your solution, we would recommend you 
-		  going to <a href="https://www.w3.org/WAI/intro/wcag.php">WCAG's homepage</a> or 
+          When you have successfully implemented wREST in your solution, we would recommend you
+		  going to <a href="https://www.w3.org/WAI/intro/wcag.php">WCAG's homepage</a> or
 		  check out our <a href="../../Documents/10Wcag.pdf"> simplified 10 point list.(PDF) </a>
         </p>
 
