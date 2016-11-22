@@ -1,10 +1,10 @@
 <?php 
 
-function suggestatribute (){
+function suggestatributeen (){
     if(!isset($_POST["submit"])) {
-        echo "If you have any suggestions for atributes we should add or changes we should make to the application, the wREST-standard, our website or anything else, please fill out the form below. <br /><br /><br /><br />";
+        echo "If you have any suggestions for changes we should make to the application, the wREST-standard, our website or anything else, please fill out the form below. <br /><br /><br /><br />";
         echo "<form action='SUGGEST-ATTRIBUTE-ENGLISH.html' method='POST'>";
-        echo "Add atribute/make change to: <br />";
+        echo "Make change to: <br />";
         echo "<select required name='type'>";
         echo "<option disabled selected value> -- select an option -- </option>";
         echo "<option value='Application'>Application</option>";
@@ -13,7 +13,7 @@ function suggestatribute (){
         echo "<option value='Other'>Other</option>";
         echo "</select> <br />";
         echo "Subject: <br /> <input type='text' name='subject' maxlength='20' required/> <br />"; 
-        echo "Describe atribute/change (500 char max): <br />";
+        echo "Describe change (500 char max): <br />";
         echo "<textarea maxlength='500' name='description'></textarea><br />";
         echo "Name: <br /> <input type='text' name='name' maxlength='50' required/> <br />";
         echo "Email: <br /> <input type='email' name='email' required/> <br />";
