@@ -44,7 +44,7 @@ $GLOBALS['side'] = "dev"; ?>-->
         <p tabindex="0">
             wREST gir informasjon i "JSON" formatet og ser slik ut:
         </p>
-        <code lang="json" tabindex="0">{
+        <code codelang="json" tabindex="0">{
 "highcontrast":"on",
 "plainText":"on",
 "screenReader":"off"
@@ -55,7 +55,7 @@ $GLOBALS['side'] = "dev"; ?>-->
 			ved å bruke PHP eller annen form for standard tjenerside-prossessering, er det enkelt å hente
 			ut informasjonen brukere har sendt. </p>
 
-        <code lang="php" tabindex="0"><?php echo'&lt;?php
+        <code codelang="php" tabindex="0"><?php echo'&lt;?php
 //Get the wREST Json config file
 $wRESTConfig;
 foreach(getallheaders() as $name =&gt; $value){
@@ -69,7 +69,7 @@ if($name == "wREST"){
         <p tabindex="0">
             Denne koden vil la <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr>
             identifisere og prossesere wREST informasjonen og lagre den i variablen <smallcode>$wRESTConfig</smallcode>, og om vi da kjører koden <smallcode>var_dump($wRESTConfig);</smallcode> får vi følgende utskrift. </p>
-        <code lang="php" tabindex="0">array(3) {
+        <code codelang="php" tabindex="0">array(3) {
 ["highcontrast"]=> string(2) "on"
 ["plainText"]=> string(2) "on"
 ["screenReader"]=> string(3) "off"
@@ -81,7 +81,7 @@ if($name == "wREST"){
         <h3 id="ssexample" tabindex="0"> Eksempel Php </h3>
         <p tabindex="0">
           I dette eksempelet viser vi hvordan du kan laste to forskjellige CSS filer bassert på om bruker har etterspurt høy kontrast på siden din. </p>
-        <code lang="php" tabindex="0">
+        <code codelang="php" tabindex="0">
 &lt;head&gt;
 &lt;?php
 $wRESTConfig;
@@ -107,14 +107,14 @@ if($wRESTConfig['highconstrast'] == "on"){  ?&gt;
 		  hvor den skal plassere wREST informasjonen (JSon objekt), slik at javascript kan få
 		  tilgang og gjøre tilpasninger.<br/>
         </p>
-        <code lang="html" tabindex="0">&lt;div hidden id="wRESTConf"&gt;
+        <code codelang="html" tabindex="0">&lt;div hidden id="wRESTConf"&gt;
 &lt;!-- Here the JSON information from
 wREST will appear --&gt; &lt;/div&gt;
 </code>
         <br/>
 
         <h3 id="rtexample" tabindex="0">Les fra div knagg</h3>
-        <code lang="javascript" tabindex="0">var wRESTConfig;
+        <code codelang="javascript" tabindex="0">var wRESTConfig;
 document.addEventListener("DOMContentLoaded", function(event) {
 wRESTConfig = JSON.parse(document.getElementById("wRESTConf").innerHTML);
 });
