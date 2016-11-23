@@ -1,0 +1,36 @@
+<!--<?php include '../../PHP/template.html';
+$GLOBALS['dev'] = false;
+$GLOBALS['lang'] = "no";
+$GLOBALS['side'] = "home"; ?>-->
+<!DOCTYPE HTML>
+<html lang=eng>
+
+<head>
+    <title>
+        <?php getTitle(); ?> </title>
+    <?php getImports(); ?>
+</head>
+
+<body>
+    <?php getHeader();?>
+
+    Hvis du ønsker å rapportere en feil på utvidelsen, standarden, nettsiden vår eller noe annet, vennligst fyll ut sjemaet under. <br /><br /><br />
+    <form action='SUGGEST-ATTRIBUTE-NYNORSK.html' method='POST'>
+        Emne: <br /> <input type='text' name='subject' maxlength='20' aria-label='emne' required/> <br />
+        Rapporter feil på: <br /><select required name='type' aria-label='feil på'>
+        <option disabled selected value> -- gjør et valg -- </option>
+        <option value='Utvidelsen'>Utvidelsen</option>
+        <option value='wREST-Standarden'>wREST-Standarden</option>
+        <option value='Nettsiden'>Nettsiden</option>
+        <option value='Annet'>Annet</option>
+        </select> <br />
+        Beskriv feilen (500 karakterer max): <br /><textarea maxlength='500' name='description' aria-label='beskriv feilen maks 500 karakterer'></textarea><br />
+        Navn: <br /> <input type='text' name='name' maxlength='50' aria-label='navn' required/> <br />
+        Epost: <br /> <input type='email' name='email' aria-label='epost' required/> <br /><br /><input value='Send endringsforslag' type='submit' name='submit' aria-label='send endringsforslag' /> <br /> <br />
+    </form>
+
+
+    <?php getFooter();?>
+</body>
+
+</html>

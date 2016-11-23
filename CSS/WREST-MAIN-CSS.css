@@ -483,6 +483,11 @@ code[codelang="json"]{
     bottom: 0;
 }
 
+.infocontainer li a {
+    text-decoration: none;
+    color: white;
+}
+
 .infocontainer {
     color: white;
     float: left;
@@ -490,6 +495,7 @@ code[codelang="json"]{
     margin: 45px 45px 45px 45px;
     height: 4vw;
     width: 16vw;
+    
 }
 
 .infocontainer h3 {
