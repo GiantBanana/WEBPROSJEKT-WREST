@@ -22,8 +22,9 @@ $GLOBALS['side'] = "dev"; ?>-->
         </div>
         <p tabindex="0">
             <abbr title="Wcag request standard">wREST</abbr>(WCAG Request Standard)
-            er en tilretteleggingsprotokol for å bruke med WCAG-standarden eller alene for å gi
-			bruker mulighet til å tilpasset nettstedet sine behov. Ved å gjøre brukerns infromasjon
+            er en tilretteleggingsprotokoll for å bruke med WCAG-standarden eller alene for å gi
+			bruker mulighet til å få tilpasset nettstedet til sine behov. 
+			Ved å gjøre brukerns informasjon
 			tilgjengelig både på tjenersiden og clientsiden håper vi å tilby en fleksibel løsning
 			for utviklere og brukere, da de slipper å spesifisere tilpassingen for hver nettside.<br/></p>
         <div class="tableOfContents">
@@ -52,7 +53,7 @@ $GLOBALS['side'] = "dev"; ?>-->
       </code>
         <p tabindex="0">
             Forespørselen er sendt via <abbr title="Hyper text markup language header">"HTTP Headers"</abbr>,
-			ved å bruke PHP eller annen form for standard tjenerside-prossessering, er det enkelt å hente
+			ved å bruke PHP eller annen form for standard tjenerside-prossessering, noe som gjør det enkelt å hente
 			ut informasjonen brukere har sendt. </p>
 
         <code codelang="php" tabindex="0"><?php echo'&lt;?php
@@ -68,7 +69,9 @@ if($name == "wREST"){
 </code>
         <p tabindex="0">
             Denne koden vil la <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr>
-            identifisere og prossesere wREST informasjonen og lagre den i variablen <smallcode>$wRESTConfig</smallcode>, og om vi da kjører koden <smallcode>var_dump($wRESTConfig);</smallcode> får vi følgende utskrift. </p>
+            identifisere og prossesere wREST informasjonen og lagre den i variablen 
+			<smallcode>$wRESTConfig</smallcode>, og om vi da kjører koden 
+			<smallcode>var_dump($wRESTConfig);</smallcode> får vi følgende utskrift:</p>
         <code codelang="php" tabindex="0">array(3) {
 ["highcontrast"]=> string(2) "on"
 ["plainText"]=> string(2) "on"
@@ -76,11 +79,12 @@ if($name == "wREST"){
 } </code>
         <p tabindex="0">
           Nå kan vi se hva brukerns behov er og gjøre handligner for å gjøre opplevelsen bedre for
-		  brukeren. Og mindre hodebry for Utvikler.
+		  brukeren og skape mindre hodebry for Utvikler.
         </p>
-        <h3 id="ssexample" tabindex="0"> Eksempel Php </h3>
+        <h3 id="ssexample" tabindex="0"> Eksempel PHP</h3>
         <p tabindex="0">
-          I dette eksempelet viser vi hvordan du kan laste to forskjellige CSS filer bassert på om bruker har etterspurt høy kontrast på siden din. </p>
+          I dette eksempelet viser vi hvordan du kan laste to forskjellige CSS filer basert 
+		  på om bruker har etterspurt høy kontrast på siden din:</p>
         <code codelang="php" tabindex="0">
 &lt;head&gt;
 &lt;?php
@@ -103,9 +107,9 @@ if($wRESTConfig['highconstrast'] == "on"){  ?&gt;
 
         <h2 id="runTime" tabindex="0"> Nettleser </h2>
         <p tabindex="0">
-          Ved å legge til en div knagg med navnet "<strong>wRESTConf</strong>", kan nettleseren vite
-		  hvor den skal plassere wREST informasjonen (JSon objekt), slik at javascript kan få
-		  tilgang og gjøre tilpasninger.<br/>
+          Ved å legge til en div knagg med navnet "<strong>wRESTConf</strong>", 
+		  kan nettleseren vite hvor den skal plassere wREST informasjonen (JSon objekt), 
+		  slik at javascript kan få tilgang og gjøre tilpasninger.<br/>
         </p>
         <code codelang="html" tabindex="0">&lt;div hidden id="wRESTConf"&gt;
 &lt;!-- Here the JSON information from
@@ -122,7 +126,7 @@ wRESTConfig = JSON.parse(document.getElementById("wRESTConf").innerHTML);
 
         <h2 id="wcagandaccessebility" tabindex="0">Steg videre</h2>
         <p tabindex="0">
-          Når du har implementert wREST i din nettside så vil vi anbefale deg og se på
+          Når du har implementert wREST i din nettside så vil vi anbefale deg å se på
 <a href="https://www.w3.org/WAI/intro/wcag.php">WCAG's hjemmeside</a> eller se vår <a href="../../Documents/10Wcag.pdf">forenklede tipunktsliste.(Eng)(PDF) </a>
         </p>
 
