@@ -1,0 +1,32 @@
+<!--<?php include '../../PHP/template.html';
+$GLOBALS['dev'] = false;
+$GLOBALS['lang'] = "en";
+$GLOBALS['side'] = "home"; ?>-->
+<!DOCTYPE HTML>
+<html lang=eng>
+
+<head>
+    <title>
+        <?php getTitle(); ?> </title>
+    <?php getImports(); ?>
+</head>
+
+<body>
+    <?php getHeader();?>
+    
+    Right now this project is at the stage of a functioning prototype. Our vision is to turn wREST into a fully featured standard and cross browser extension. However, we are currently just a five person team of students with limited time. If you would like to contribute in developing wREST please contact us through the form below and describe your skill set and/or what you would like to contribute in the text field. We will be in contact and any help is apriciated.   
+    <br /><br /><br />
+    <form action='BECOME-CONTRIBUTOR-ENGLISH.html' method='POST'>
+        
+        First name: <br /> <input type='text' name='firstname' maxlength='30' aria-label='firstname' required/> <br />
+        Last name: <br /> <input type="text" name="lastname" maxlength="30" aria-label='lastname' required/> <br />
+        Email: <br /> <input type='email' name='email' aria-label='email' required/> <br /><br />
+        Describe skillset (1000 characters max): <br /><textarea maxlength='1000' name='description' aria-label='describe skillset and what you would like to contribute 500 characters max'></textarea><br />
+        <input value='Send' type='submit' name='submit' aria-label='send' /> <br />
+    </form>
+
+
+    <?php getFooter();?>
+</body>
+
+</html>

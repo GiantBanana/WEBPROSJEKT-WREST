@@ -1,0 +1,32 @@
+<!--<?php include '../../PHP/template.html';
+$GLOBALS['dev'] = false;
+$GLOBALS['lang'] = "ny";
+$GLOBALS['side'] = "home"; ?>-->
+<!DOCTYPE HTML>
+<html lang=eng>
+
+<head>
+    <title>
+        <?php getTitle(); ?> </title>
+    <?php getImports(); ?>
+</head>
+
+<body>
+    <?php getHeader();?>
+
+    Akkurat nå er dette prosjektet på prototypstadiet. Vår visjon er å gjøre wREST til en fult komplett standard og tverrplatform nettleserutvidelse. Dessverre er vi en kun en fempersonsgruppe med studenter  som har begrenset tid. Hvis du kunne tenke deg å bidra til prosjektet vennligst kontakt oss gjennom sjemaetunder og beskriv dine ferdigheter og/eller hva du vil bidra med i tekstfeltet. Vi tar kontakt og all hjelp er sterkt verdsatt.
+    <br /><br /><br />
+    <form action='BECOME-CONTRIBUTOR-NYNORSK.html' method='POST'>
+        
+        Fornavn: <br /> <input type='text' name='firstname' maxlength='30' aria-label='fornavn' required/> <br />
+        Etternavn: <br /> <input type="text" name="lastname" maxlength="30" aria-label='etternavn' required/> <br />
+        Epost: <br /> <input type='email' name='email' aria-label='epost' required/> <br /><br />
+        Beskriv din ferdighet (1000 karakterer maks): <br /><textarea maxlength='1000' name='description' aria-label='beskriv din ferdighet og hva du ønsker å bidra med 1000 karakterer maks'></textarea><br />
+        <input value='Send' type='submit' name='submit' aria-label='send' /> <br />
+    </form>
+
+
+    <?php getFooter();?>
+</body>
+
+</html>
