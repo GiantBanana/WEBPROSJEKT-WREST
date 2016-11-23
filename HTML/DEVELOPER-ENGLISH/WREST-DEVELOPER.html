@@ -16,16 +16,17 @@ $GLOBALS['side'] = "dev"; ?>-->
     <?php getHeader();?>
 
     <section role="main">
-        <h1 tabindex="0">WRest Documentation</h1>
+        <h1 tabindex="0">wREST Documentation</h1>
         <div class="imgWithTitle">
             <img tabindex="0" src="../../Images/illustration1.png" alt="Arrow from Browser icons to server icon showing sending of information" />
-            <p>Arrow from Browser icons to server icon showing sending of information</p>
         </div>
         <p tabindex="0">
-            <abbr title="Wcag request standard">WRest</abbr>(Wcag request standard) is an accessebility protocol for use with the Wcag standard or as a stand alone customization alternative. By serving this information both on the server side and client
-            side it's easy to costomize your webpage for the user without having the user request it per site. <br/></p>
+            <abbr title="WCAG request standard">wREST</abbr>(WCAG Request Standard) is an accessibility
+			protocol for use with the WCAG-standard or as a stand alone customization alternative. By
+			serving this information both on the server side and client side it's easy to customize
+			your webpage for the user without having the user request it per site. <br/></p>
             <div class="tableOfContents">
-              <h1 tabindex="0">Table of contents:</h1>
+              <h1 tabindex="0">Table of Contents:</h1>
               <br/>
             <h2><a href="#serverSide">-Server Side</a></h2>
             <br/>
@@ -33,25 +34,25 @@ $GLOBALS['side'] = "dev"; ?>-->
             <br/>
             <h2><a href="#runTime">-Runtime</a></h2>
             <br/>
-            <h3><a href="#rtexample">-Read div tag</a></h3>
+            <h3><a href="#rtexample">-Read Div-tag</a></h3>
             <br/>
-            <h2><a href="#wcagandaccessebility">-Steps next</a></h2>
+            <h2><a href="#wcagandaccessebility">-Steps Next</a></h2>
             </div>
 
         <h2 id="serverSide" tabindex="0"> Server Side </h2>
         <p tabindex="0">
-                  The json input from wRest is as follows
+                  The json input from wREST is as follows:
         </p>
-<code lang="json" tabindex="0">{
+<code codelang="json" tabindex="0">{
   "highcontrast":"on",
   "plainText":"on",
   "screenReader":"off"
 }
         </code>
         <p tabindex="0">
-            The request is sendt with the <abbr title="Hyper text markup language header">HTTP Headers</abbr>, so by using standard php or other serverside language you can easily get the infromation with the request</p>
+            The request is sent with the <abbr title="Hyper text markup language header">HTTP Headers</abbr>, so by using standard php or other serverside language you can easily get the information with the request.</p>
 
-<code lang="php" tabindex="0"><?php echo'&lt;?php
+<code codelang="php" tabindex="0"><?php echo'&lt;?php
 //Get the WRest Json config file
 $wRestConfig;
 foreach(getallheaders() as $name =&gt; $value){
@@ -63,18 +64,21 @@ foreach(getallheaders() as $name =&gt; $value){
 ?&gt;';?>
 </code>
 <p tabindex="0">
-  Running this code will allow <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr> to find and process the wRest tag in the HTTP header, and its now stored in the <smallcode>$wRestConfig</smallcode> variable, and if we do a <smallcode>var_dump($wRestConfig);</smallcode> we get this output. </p>
-  <code lang="php" tabindex="0">array(3) {
+  Running this code will allow <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr> to find and process
+  the wREST tag in the HTTP header, and its now stored in the <smallcode>$wRestConfig</smallcode> variable,
+  and if we do a <smallcode>var_dump($wRestConfig);</smallcode> we get this output: </p>
+  <code codelang="php" tabindex="0">array(3) {
   ["highcontrast"]=> string(2) "on"
   ["plainText"]=> string(2) "on"
   ["screenReader"]=> string(3) "off"
 } </code>
 <p tabindex="0">
-  At this point you can check the users needs and do approriate actions to accommodate the users need, making it smoother for booth user and developer.
+  At this point you can check the users needs and do appropriate actions to accommodate these
+  needs, making it smoother for booth user and developer.
 </p>
   <h3 id="ssexample" tabindex="0"> Example Php </h3>
-    <p tabindex="0"> In this example we show how you can load a seprate CSS for users requesting high constrast pages.</p>
-<code lang="php" tabindex="0">
+    <p tabindex="0"> In this example we show how you can load a separate CSS for users requesting high contrast pages.</p>
+<code codelang="php" tabindex="0">
 &lt;head&gt;
   &lt;?php
   $wRestConfig;
@@ -104,24 +108,26 @@ foreach(getallheaders() as $name =&gt; $value){
 
         <h2 id="runTime" tabindex="0"> Runtime </h2>
         <p tabindex="0">
-            By implementing the div tag with name "<strong>wRESTConf</strong>" will the browser know where to put the json config object, and you can then use javascript to access it during runtime <br/>
+            By implementing the div tag with name "<strong>wRESTConf</strong>", the browser will know where to put the json config object, and you can then use javascript to access it during runtime. <br/>
       </p>
-<code lang="html" tabindex="0">&lt;div hidden id="wRESTConf"&gt;
+<code codelang="html" tabindex="0">&lt;div hidden id="wRESTConf"&gt;
 &lt;!-- Here the JSON information from
 WRest will appear --&gt; &lt;/div&gt;
 </code>
 <br/>
 
-<h3 id="rtexample" tabindex="0">Read from the Wrest div tag</h3>
-<code lang="javascript" tabindex="0">var wrestConfig;
+<h3 id="rtexample" tabindex="0">Read from the wREST div-tag</h3>
+<code codelang="javascript" tabindex="0">var wrestConfig;
 document.addEventListener("DOMContentLoaded", function(event) {
   wrestConfig = JSON.parse(document.getElementById("wRestConf").innerHTML);
 });
 </code>
 
-        <h2 id="wcagandaccessebility" tabindex="0">WCag and accessebility</h2>
+        <h2 id="wcagandaccessebility" tabindex="0">WCAG and accessibility</h2>
         <p tabindex="0">
-          When you have successfully implemented wRest in your solution, i would recomend you going to <a href="https://www.w3.org/WAI/intro/wcag.php">wcag's homepage</a> or check out our <a href="../../Documents/10Wcag.pdf"> simplified 10 point list.(PDF) </a>
+          When you have successfully implemented wREST in your solution, we would recommend you
+		  going to <a href="https://www.w3.org/WAI/intro/wcag.php">WCAG's homepage</a> or
+		  check out our <a href="../../Documents/10Wcag.pdf"> simplified 10 point list.(PDF) </a>
         </p>
 
     </section>
