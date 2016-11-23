@@ -16,30 +16,35 @@ $GLOBALS['side'] = "dev"; ?>-->
     <?php getHeader();?>
 
         <section role="main">
-          <h1 tabindex="0">WRest Dokumentasjon</h1>
+          <h1 tabindex="0">wREST Dokumentasjon</h1>
           <div class="imgWithTitle">
-              <img tabindex="0" src="../../Images/illustration1.png" alt="Pil fra nettleser ikon til netttjener ikon, symboliserer sending av informasjon." />
+              <img tabindex="0" src="../../Images/illustration1.png" alt="Pil frå nettlesar ikon til nettjener ikon, symboliserer sending av informasjon." />
           </div>
           <p tabindex="0">
-              <abbr title="Wcag request standard">WRest</abbr>(Wcag request standard)
-              er en tilretteleggingsprotokol for å bruke med WCag standarden eller alene for å gi bruker mulighet til å tilpasset nettstedet sine behov. Ved å gjøre brukerns infromasjon tilgjengelig både på tjenersiden og clientsiden håper vi å tilby en fleksibel løsning for utviklere og brukere, da de slipper å spesifisere tilpassingen for hver nettside.<br/></p>
+              <abbr title="WCAG Request Standard">wREST</abbr>(WCAG Request Standard)
+              er ein tilretteleggingsprotokol for å bruke med WCAG-standarden eller åleine 
+			  for å gje brukar moglegheit til å tilpasse nettstaden til sine behov. 
+			  Ved å gjere informasjonen til brukaren tilgjengeleg både på tenarsida og 
+			  clientsida håpar me å tilby ei fleksibel løysing for utviklarar og brukarar, 
+			  då dei slepp å spesifisere tilpassinga for kvar enkelt nettside.
+		<br/></p>
           <div class="tableOfContents">
-              <h1 tabindex="0">Innholdsfortegnelse:</h1>
+              <h1 tabindex="0">Innhaldsforteikning:</h1>
               <br/>
-              <h2><a href="#serverSide">-Netttjener</a></h2>
+              <h2><a href="#serverSide">-Nettenar</a></h2>
               <br/>
               <h3><a href="#ssexample">-Eksempel</a></h3>
               <br/>
-              <h2><a href="#runTime">-Nettleseren</a></h2>
+              <h2><a href="#runTime">-Nettlesaren</a></h2>
               <br/>
-              <h3><a href="#rtexample">-Les div knagg</a></h3>
+              <h3><a href="#rtexample">-Les div-knagg</a></h3>
               <br/>
-              <h2><a href="#wcagandaccessebility">-Steg videre</a></h2>
+              <h2><a href="#wcagandaccessebility">-Steg vidare</a></h2>
           </div>
 
-          <h2 id="serverSide" tabindex="0"> Netttjener </h2>
+          <h2 id="serverSide" tabindex="0">Nettenar</h2>
           <p tabindex="0">
-              wRest gir informasjon i "JSON" formattet og ser slik ut.
+              wREST gjer informasjon i "JSON" formatet og ser slik ut:
           </p>
           <code codelang="json" tabindex="0">{
   "highcontrast":"on",
@@ -48,7 +53,10 @@ $GLOBALS['side'] = "dev"; ?>-->
   }
         </code>
           <p tabindex="0">
-              Forespørselen er sendt via <abbr title="Hyper text markup language header">"HTTP Headers"</abbr>, ved å bruke PHP eller annen form for standard tjenerside prossessering, er det enkelt å hente ut informasjonen brukere har sendt. </p>
+			Førespurnaden er sendt via <abbr title="Hyper text markup language header">"HTTP 
+			Headers"</abbr>, ved å bruke PHP eller ei anna form for standard tenarside-prossessering, 
+			er det enkelt å hente ut informasjonen brukarar har sendt.	  
+		</p>
 
           <code codelang="php" tabindex="0"><?php echo'&lt;?php
   //Get the WRest Json config file
@@ -62,19 +70,25 @@ $GLOBALS['side'] = "dev"; ?>-->
   ?&gt;';?>
   </code>
           <p tabindex="0">
-              Denne koden vil la <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr>
-              identifisere og prossesere wRest informasjonen og lagre den i variablen <smallcode>$wRestConfig</smallcode>, og om vi da kjører koden <smallcode>var_dump($wRestConfig);</smallcode> får vi følgende utskrift. </p>
+			Denne koden vil la <abbr title="PHP: Hypertext Preprocessor">PHP</abbr>
+			identifisere og prosessere wREST informasjonen og 
+			lagre den i variabelen <smallcode>$wRESTConfig</smallcode>, og om me då køyrer koden 
+			<smallcode>var_dump($wRESTConfig)</smallcode>; 
+			får me følgjande utskrift:
+		</p>
           <code codelang="php" tabindex="0">array(3) {
   ["highcontrast"]=> string(2) "on"
   ["plainText"]=> string(2) "on"
   ["screenReader"]=> string(3) "off"
   } </code>
           <p tabindex="0">
-            Nå kan vi se hva brukerns behov er og gjøre handligner for å gjøre opplevelsen bedre for brukern. Og mindre hodebry for Utvikler.
+            No kan me sjå kva brukaren sine behov er og gjere handlingar for å betre opplevinga 
+			for brukaren, og for å skape mindre hovudbry for utviklaren.
           </p>
-          <h3 id="ssexample" tabindex="0"> Eksempel Php </h3>
+          <h3 id="ssexample" tabindex="0"> Døme PHP </h3>
           <p tabindex="0">
-            I dette eksempelet viser vi hvordan du kan laste to forskjellige CSS filer bassert på om bruker har etterspurt høy kontrast på siden din. </p>
+			I dette døme syner me korleis du kan laste to ulike CSS filar basert på om brukar har etterspurd høg kontrast på sida di:
+		  </p>
           <code codelang="php" tabindex="0">
   &lt;head&gt;
   &lt;?php
@@ -97,7 +111,10 @@ $GLOBALS['side'] = "dev"; ?>-->
 
           <h2 id="runTime" tabindex="0"> Nettleser </h2>
           <p tabindex="0">
-            Ved å legge til en div knagg med navnet "<strong>wRESTConf</strong>", kan nettleseren vite hvor den skal plassere wRest informasjonen (JSon objekt), slik at javascript kan få tilgang og gjøre tilpassninger.  <br/>
+			Ved å leggje til ein div knagg med namnet <strong>"wRESTConf"</strong>, kan nettlesaren 
+			vite kvar den skal plassere wREST informasjonen (JSon objekt), slik at javascript 
+			kan få tilgang og gjere tilpassingar.
+			<br/>
           </p>
           <code codelang="html" tabindex="0">&lt;div hidden id="wRESTConf"&gt;
   &lt;!-- Here the JSON information from
@@ -112,10 +129,11 @@ $GLOBALS['side'] = "dev"; ?>-->
   });
   </code>
 
-          <h2 id="wcagandaccessebility" tabindex="0">Steg videre</h2>
+          <h2 id="wcagandaccessebility" tabindex="0">Steg vidare</h2>
           <p tabindex="0">
-            Når du har implementert wRest i din nettside så vil vi anbefale deg og se på
-  <a href="https://www.w3.org/WAI/intro/wcag.php">wcag's hjemmeside</a> eller se vår <a href="../../Documents/10Wcag.pdf">forenklede 10 punks liste.(Eng)(PDF) </a>
+            Når du har implementert wREST i di nettside så vil me anbefale deg og sjå på
+			<a href="https://www.w3.org/WAI/intro/wcag.php">WCAG's heimeside</a> 
+			eller sjå vår <a href="../../Documents/10Wcag.pdf">forenkla tipunktliste.(Eng)(PDF)</a>
           </p>
 
         </section>
