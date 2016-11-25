@@ -141,11 +141,14 @@ function getImports()
     ?>
     <meta charset="utf-8">
     <meta name="HTML Start Template" content="A Start Out Template for HTML Files">
-    <link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" />
+	<link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" /> 
+   <!-- <link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" media="print, handheld" type="text/css" /> -->
+	<link href="../../CSS/WREST-MOBILE-CSS.css" rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px), handheld" />
+
     <?php
     // If the dev variable is set also load the dev css
     //if($GLOBALS['dev']){
-        echo '<link href="../../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />';
+     //   echo '<link href="../../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />';
     //}
     ?>
     <script src="../../JS/main_script.js"></script>

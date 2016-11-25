@@ -1,0 +1,68 @@
+body {
+	font-size: 16px;}
+	
+.developertab {
+    right: 11em;}
+
+.mainsectioncontainer {
+    margin: 0px 20px 0px 20px;  
+    padding-top: 30px;  
+    padding-bottom: 50px; 
+    height: 50%;}
+	
+.mainsectioncontainer h1 {
+	font-size: 25px;}
+	
+.tableOfContents {
+	width: 80%;}
+
+.tableOfContents h1 {
+	font-size: 20px;
+	font-weight: bold;}
+
+.tableOfContents h2 {
+	font-size: 14px; 
+	margin-top: -15px;}
+	
+.tableOfContents h3 {
+	font-size: 14px; 
+	margin-top: -15px;}
+	
+.mainnavcontainer nav {
+	padding: 2px;}
+
+.mainnavcontainer a {
+    width: 100px;
+	font-size: 20px;
+	padding-left: 5px;
+	padding-right: 5px;}
+	
+.bannercontainer img {
+	margin-left: 10px;
+	width: 20%;}
+
+.languagenav {
+    width: 70vw;}
+	
+.languagenav a {
+	font-size: 16px;}
+
+.languagenav img {
+    width: 5vw;
+    height: 5vw;}
+	
+code {
+	width: 300px;
+	overflow: scroll;}
+
+.footercontainer {
+    min-height: 240px;
+    width: 100%;
+	font-size: 14px;
+	height: 400px;}
+	
+.infocontainer {
+    margin-top: 40px;
+    height: 8vw;
+    width: 100%;
+	clear: both;}
