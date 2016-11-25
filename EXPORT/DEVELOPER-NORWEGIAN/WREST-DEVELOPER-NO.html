@@ -1,0 +1,255 @@
+
+<!---->
+<!DOCTYPE HTML>
+<html lang=eng>
+
+<head>
+    <title>
+        Wrest Wcag Requst Standard | NO |  </title>
+        <meta charset="utf-8">
+    <meta name="HTML Start Template" content="A Start Out Template for HTML Files">
+    <link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" />
+    <link href="../../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />    <script src="../../JS/main_script.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <!-- This makes it possible to use the CSS units
+    50 vw       | % of vertical viewport
+    50 vh       | % of horizontal viewport
+    60 vmin     | % of min vertical viewport
+    60 vmax     | % of max vertical viewport
+    -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          <link rel="shortcut icon" type="image/png" href="../../Images/Logos/WREST_LOGO_LARGE.png"/>
+        </head>
+
+<body>
+
+                <div id="skip-link">
+                <a tabindex="1" href="#content">
+                    Hopp til hovedinnhold                </a>
+            </div>
+            <div class="bodycontainer">
+                <div class="bannercontainer">
+                  <a href="../USER-NORWEGIAN/WREST-HOME-NO.html" tabindex="-1">
+                    <img src="../../Images/Logos/WREST_LOGO_LARGE.png" role="banner" alt="WREST company logo." tabindex="-1"/>
+                  </a>
+                </div>
+                <div class="languagenav">
+                    <nav role="navigation" tabindex="-1">
+                        <ul ><!--
+                          <li><a id="descreaseFont" onClick="descreaseFont()" href="#" style="font-weight:900; font-size:1.1rem; color:black">=</a></li>
+                          <li style="position:relative;top:0.35rem;">
+                            <span class="aSymbol" style="font-size: 0.5rem;"></span>
+                            <span class="aSymbol" style="font-size: 1rem;"></span>
+                            <span class="aSymbol" style="font-size: 1.5rem;"></span>
+                          </li>
+                          <li><a id="increaseFont" onClick="increaseFont()" href="#" style="font-weight:900; font-size:1.1rem; color:black"><!-- Here a plus/minus symbol will be added by javascript</a></li>-->
+                            <li>
+                                <a href="
+
+    ../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html    " class="selectedLang">
+                                        <img src="../../Images/Icons/NO.png" alt="Trykk her for norsk" />Norsk</a>
+                            </li>
+                            <li>
+                                <a href="
+    ../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html    " ><img src="../../Images/Icons/NO.png" alt="Trykk her for nynorsk" />Nynorsk</a>
+                            </li>
+                            <li>
+                                <a href="
+    ../DEVELOPER-ENGLISH/WREST-DEVELOPER.html
+    " ><img src="../../Images/Icons/GB.png" alt="Click here for English" />English</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="developertab">
+                    <nav role="navigation">
+                        <ul>
+                            <li><a href="../USER-NORWEGIAN/WREST-HOME-NO.html" id="developertabactive">Bruker</a></li
+        ><li><a href="../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html" id="notactive">Utvikler</a></li>                        </ul>
+                    </nav>
+                </div>
+                <div class="mainnavcontainer">
+                    <nav role="navigation">
+                        <ul>
+                            <!--
+            Fixed the invi margin between li element by doing the
+            <li> element</li
+            >
+
+            Its a fucked up thing
+            Sauce: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+            -->
+                            <li>
+                    <a class="currentPage" href="../DEVELOPER-NORWEGIAN/WREST-DEVELOPER-NO.html">
+                        Dokumentasjon                    </a>
+                </li>
+                <li>
+                    <a
+                    href="../TOBECOMPLETED/NO.html">
+                        KildeKode                    </a>
+                </li>
+                <li>
+                    <a class="externalLink" href="https://chrome.google.com/webstore/detail/wrest/lbcpokhocfblmhlaanfnchmjfjacnede?utm_source=chrome-app-launcher-info-dialog" target="_blank">
+                        Nedlasting                    </a>
+                </li>
+                <li>
+                    <a class="externalLink" href="http://www.passeride.com" target="_blank">
+                        Demo Side                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+                            <div class="mainsectioncontainer">
+                    <section role="main" id="content">
+
+    <section role="main">
+        <h1 tabindex="0">wREST Dokumentasjon</h1>
+        <div class="imgWithTitle">
+            <img tabindex="0" src="../../Images/browser.png" alt="Pil fra nettleser ikon til netttjener ikon, symboliserer sending av informasjon." />
+        </div>
+        <p tabindex="0">
+            <abbr title="Wcag request standard">wREST</abbr>(WCAG Request Standard)
+            er en tilretteleggingsprotokoll for å bruke med WCAG-standarden eller alene for å gi
+			bruker mulighet til å få tilpasset nettstedet til sine behov.
+			Ved å gjøre brukerns informasjon
+			tilgjengelig både på tjenersiden og clientsiden håper vi å tilby en fleksibel løsning
+			for utviklere og brukere, da de slipper å spesifisere tilpassingen for hver nettside.<br/></p>
+        <div class="tableOfContents">
+            <h1 tabindex="0">Innholdsfortegnelse:</h1>
+            <br/>
+            <h2><a href="#serverSide">-Nettjener</a></h2>
+            <br/>
+            <h3><a href="#ssexample">-Eksempel</a></h3>
+            <br/>
+            <h2><a href="#runTime">-Nettleseren</a></h2>
+            <br/>
+            <h3><a href="#rtexample">-Les div-knagg</a></h3>
+            <br/>
+            <h2><a href="#wcagandaccessebility">-Steg videre</a></h2>
+        </div>
+
+        <h2 id="serverSide" tabindex="0"> Nettjener </h2>
+        <p tabindex="0">
+            wREST gir informasjon i "JSON" formatet og ser slik ut:
+        </p>
+        <code codelang="json" tabindex="0">{
+"highcontrast":"on",
+"plainText":"on",
+"screenReader":"off"
+}
+      </code>
+        <p tabindex="0">
+            Forespørselen er sendt via <abbr title="Hyper text markup language header">"HTTP Headers"</abbr>,
+			ved å bruke PHP eller annen form for standard tjenerside-prossessering, noe som gjør det enkelt å hente
+			ut informasjonen brukere har sendt. </p>
+
+        <code codelang="php" tabindex="0">&lt;?php
+//Get the wREST Json config file
+$wRESTConfig;
+foreach(getallheaders() as $name =&gt; $value){
+if($name == "wREST"){
+  echo "your wREST code is " . $value;
+              $wRESTConfig = json_decode($value, true);
+}
+}
+?&gt;</code>
+        <p tabindex="0">
+            Denne koden vil la <abbr title="PHP: Hypertext Preprocessor"> PHP </abbr>
+            identifisere og prossesere wREST informasjonen og lagre den i variablen
+			<smallcode>$wRESTConfig</smallcode>, og om vi da kjører koden
+			<smallcode>var_dump($wRESTConfig);</smallcode> får vi følgende utskrift:</p>
+        <code codelang="php" tabindex="0">array(3) {
+["highcontrast"]=> string(2) "on"
+["plainText"]=> string(2) "on"
+["screenReader"]=> string(3) "off"
+} </code>
+        <p tabindex="0">
+          Nå kan vi se hva brukerns behov er og gjøre handligner for å gjøre opplevelsen bedre for
+		  brukeren og skape mindre hodebry for Utvikler.
+        </p>
+        <h3 id="ssexample" tabindex="0"> Eksempel PHP</h3>
+        <p tabindex="0">
+          I dette eksempelet viser vi hvordan du kan laste to forskjellige CSS filer basert
+		  på om bruker har etterspurt høy kontrast på siden din:</p>
+        <code codelang="php" tabindex="0">
+&lt;head&gt;
+&lt;?php
+$wRESTConfig;
+// Getting http wREST header
+foreach(getallheaders() as $name =&gt; $value){
+  if($name == "wREST"){
+          $wRESTConfig = json_decode($value, true);
+  }
+}
+// Checking if user requested highcontrast
+if($wRESTConfig['highconstrast'] == "on"){  ?&gt;
+  &lt;link href="highconstrast.css" rel="stylesheet" type="text/css"&gt;
+  &lt;?php    }else{    ?&gt;
+  &lt;link href="normal.css" rel="stylesheet" type="text/css"&gt;
+  &lt;?php    }        ?&gt;
+&lt;/head&gt;
+
+</code>
+
+        <h2 id="runTime" tabindex="0"> Nettleser </h2>
+        <p tabindex="0">
+          Ved å legge til en div knagg med navnet "<strong>wRESTConf</strong>",
+		  kan nettleseren vite hvor den skal plassere wREST informasjonen (JSon objekt),
+		  slik at javascript kan få tilgang og gjøre tilpasninger.<br/>
+        </p>
+        <code codelang="html" tabindex="0">&lt;div hidden id="wRESTConf"&gt;
+&lt;!-- Here the JSON information from
+wREST will appear --&gt; &lt;/div&gt;
+</code>
+        <br/>
+
+        <h3 id="rtexample" tabindex="0">Les fra div knagg</h3>
+        <code codelang="javascript" tabindex="0">var wRESTConfig;
+document.addEventListener("DOMContentLoaded", function(event) {
+wRESTConfig = JSON.parse(document.getElementById("wRESTConf").innerHTML);
+});
+</code>
+
+        <h2 id="wcagandaccessebility" tabindex="0">Steg videre</h2>
+        <p tabindex="0">
+          Når du har implementert wREST i din nettside så vil vi anbefale deg å se på
+<a href="https://www.w3.org/WAI/intro/wcag.php">WCAG's hjemmeside</a> eller se vår <a href="../../Documents/10Wcag.pdf">forenklede tipunktsliste.(Eng)(PDF) </a>
+        </p>
+
+    </section>
+                        </section>
+                </div>
+                <div class="footercontainer">
+                    <footer>
+                        <div class="infocontainer">
+                            <h3>Kontakt Oss</h3>
+                            <ul>
+                                <li><a href="../CONTACT-US-CHANGE/SUGGEST-ATTRIBUTE-NORSK.html">Foreslå En Endring</a></li>
+                                <li><a href="../CONTACT-US-ISSUE/REPORT-ISSUE-NORSK.html">Rapporter Et Problem</a></li>
+                                <li><a href="../CONTACT-US-CONTRIBUTOR/BECOME-CONTRIBUTOR-NORSK.html">Bli En Bidragsyter</a></li>
+                            </ul>
+                        </div>
+                        <div class="infocontainer">
+                            <h3>Brukerstøtte</h3>
+                            <ul>
+                                <li><a>Installasjonshjelp</a></li>
+                                <li><a>Rådgivning</a></li>
+                                <li><a>Profilering</a></li>
+                            </ul>
+                        </div>
+                        <div class="infocontainer">
+                            <h3>Kilder</h3>
+                            <ul>
+                                <li><a href="https://www.w3.org/TR/WCAG20/" target="_blank">WCAG 2.0</a></li>
+                                <li><a href="../SOURCES/SOURCES-ACC-NO.html">Tilrettelegging</a></li>
+                                <li><a href="../SOURCES/SOURCES-OTH-NO.html">Andre</a></li>
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
+            </div>
+
+</body>
+
+</html>
