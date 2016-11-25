@@ -1,19 +1,99 @@
-<!--<?php include '../../PHP/template.html';
-$GLOBALS['dev'] = false;
-$GLOBALS['lang'] = "en";
-$GLOBALS['side'] = "home"; ?>-->
+
+<!---->
 <!DOCTYPE HTML>
 <html lang=eng>
 
 <head>
     <title>
-        <?php getTitle(); ?> </title>
-    <?php getImports(); ?>
-</head>
+        Wrest Wcag Request Standard | EN |  </title>
+        <meta charset="utf-8">
+    <meta name="HTML Start Template" content="A Start Out Template for HTML Files">
+    <link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" />
+    <link href="../../CSS/WREST-DEVELOPER-CSS.css" rel="stylesheet" type="text/css" />    <script src="../../JS/main_script.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+        <!-- This makes it possible to use the CSS units
+    50 vw       | % of vertical viewport
+    50 vh       | % of horizontal viewport
+    60 vmin     | % of min vertical viewport
+    60 vmax     | % of max vertical viewport
+    -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+          <link rel="shortcut icon" type="image/png" href="../../Images/Logos/WREST_LOGO_LARGE.png"/>
+        </head>
 
 <body>
-    <?php getHeader();?>
-    
+                <div id="skip-link">
+                <a tabindex="1" href="#content">
+                    Skip to Content                </a>
+            </div>
+            <div class="bodycontainer">
+                <div class="bannercontainer">
+                  <a href="../USER-ENGLISH/WREST-MAIN-HOME.html" tabindex="-1">
+                    <img src="../../Images/Logos/WREST_LOGO_LARGE.png" role="banner" alt="WREST company logo." tabindex="-1"/>
+                  </a>
+                </div>
+                <div class="languagenav">
+                    <nav role="navigation" tabindex="-1">
+                        <ul ><!--
+                          <li><a id="descreaseFont" onClick="descreaseFont()" href="#" style="font-weight:900; font-size:1.1rem; color:black">=</a></li>
+                          <li style="position:relative;top:0.35rem;">
+                            <span class="aSymbol" style="font-size: 0.5rem;"></span>
+                            <span class="aSymbol" style="font-size: 1rem;"></span>
+                            <span class="aSymbol" style="font-size: 1.5rem;"></span>
+                          </li>
+                          <li><a id="increaseFont" onClick="increaseFont()" href="#" style="font-weight:900; font-size:1.1rem; color:black"><!-- Here a plus/minus symbol will be added by javascript</a></li>-->
+                            <li>
+                                <a href="../CONTACT-US-CONTRIBUTOR/BECOME-CONTRIBUTOR-NORSK.html" >
+                                        <img src="../../Images/Icons/NO.png" alt="Trykk her for norsk" />Norsk</a>
+                            </li>
+                            <li>
+                                <a href="../CONTACT-US-CONTRIBUTOR/BECOME-CONTRIBUTOR-NYNORSK.html" ><img src="../../Images/Icons/NO.png" alt="Trykk her for nynorsk" />Nynorsk</a>
+                            </li>
+                            <li>
+                                <a href="../CONTACT-US-CONTRIBUTOR/BECOME-CONTRIBUTOR-ENGLISH.html" class="selectedLang"><img src="../../Images/Icons/GB.png" alt="Click here for English" />English</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="developertab">
+                    <nav role="navigation">
+                        <ul>
+                            <li><a href="../USER-ENGLISH/WREST-MAIN-HOME.html" id="notactive">User</a></li
+        ><li><a href="../DEVELOPER-ENGLISH/WREST-DEVELOPER.html" id="developertabactive">Developer</a></li>                        </ul>
+                    </nav>
+                </div>
+                <div class="mainnavcontainer">
+                    <nav role="navigation">
+                        <ul>
+                            <!--
+            Fixed the invi margin between li element by doing the
+            <li> element</li
+            >
+
+            Its a fucked up thing
+            Sauce: https://css-tricks.com/fighting-the-space-between-inline-block-elements/
+            -->
+                                        <li>
+                                <a
+                                                                 href="../USER-ENGLISH/WREST-MAIN-HOME.html">
+                                    Home                                </a>
+                            </li>
+                            <li>
+                                <a                                 href="../USER-ENGLISH/WREST-MAIN - ABOUT.html">
+                                    About                                </a>
+                            </li>
+                            <li>
+                                <a class="externalLink"
+                                href="https://chrome.google.com/webstore/detail/wrest/lbcpokhocfblmhlaanfnchmjfjacnede?utm_source=chrome-app-launcher-info-dialog" target="_blank">
+                                    Download                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                                <div class="mainsectioncontainer">
+                    <section role="main" id="content">
+                            
     Right now this project is at the stage of a functioning prototype. Our vision is to turn wREST into a fully featured standard and cross browser extension. However, we are currently just a five person team of students with limited time. If you would like to contribute in developing wREST please contact us through the form below and describe your skill set and/or what you would like to contribute in the text field. We will be in contact and any help is apriciated.   
     <br /><br /><br />
     <form action='../THANK-YOU/THANK-YOU-ENGLISH.html' method='POST'>
@@ -26,7 +106,38 @@ $GLOBALS['side'] = "home"; ?>-->
     </form>
 
 
-    <?php getFooter();?>
-</body>
+                    </section>
+                </div>
+                <div class="footercontainer">
+                    <footer>
+                        <div class="infocontainer">
+                          <h3>Contact Us</h3>
+                          <ul>
+                              <li><a href="../CONTACT-US-CHANGE/SUGGEST-ATTRIBUTE-ENGLISH.html">Suggest A Change</a></li>
+                              <li><a href="../CONTACT-US-ISSUE/REPORT-ISSUE-ENGLISH.html">Report Issue</a></li>
+                              <li><a href="../CONTACT-US-CONTRIBUTOR/BECOME-CONTRIBUTOR-ENGLISH.html">Become A Contributer</a></li>
+                          </ul>
+                        </div>
+                        <div class="infocontainer">
+                            <h3>User Support</h3>
+                            <ul>
+                                <li><a>Installation help</a></li>
+                                <li><a>Consulting</a></li>
+                                <li><a>Profiling</a></li>
+                            </ul>
+                        </div>
+                        <div class="infocontainer">
+                            <h3>Sources</h3>
+                            <ul>
+                                <li><a href="https://www.w3.org/TR/WCAG20/" target="_blank">WCAG 2.0</a></li>
+                                <li><a href="../SOURCES/SOURCES-ACC-EN.html">Accessibility</a></li>
+                                <li><a href="../SOURCES/SOURCES-OTH-EN.html">Other</a></li>
+                            </ul>
+                        </div>
+                    </footer>
+                </div>
+                </div>
+
+                </body>
 
 </html>
