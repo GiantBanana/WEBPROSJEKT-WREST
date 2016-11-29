@@ -8,12 +8,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
             console.log(JSON.stringify(items));
             config_name = JSON.stringify(items);
         });
-
-
-
-
 });
 
+chrome.storage.onChanged.addListener(function(changes, namespace) {
+  for (key in changes) {
+    var storageChange = changes[key];
+    console.log('Storage key "%s" in namespace "%s" changed. ' +
+                'Old value was "%s", new value is "%s".',
+                key,
+                namespace,
+                storageChange.oldValue,
+                storageChange.newValue);
+  }
+  chrome.storage.sync.get(['highcontrast', 'screenReader', 'plainText'], function(items) {
+      console.log('Settings retrieved', items);
+      console.log(JSON.stringify(items));
+      config_name = JSON.stringify(items);
+  });
+});
 
 
 var requestFilter = {
@@ -32,17 +44,14 @@ var requestFilter = {
             console.log('Settings retrieved', items);
             console.log(JSON.stringify(items));
             config_name = JSON.stringify(items);
-
-            
-
         });
-       
+
         headers.push({
                 name: "wREST",
                 value: config_name
         });
 
-        
+
         blockingResponse.requestHeaders = headers;
         return blockingResponse;
     };

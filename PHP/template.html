@@ -22,6 +22,8 @@ $devLinks = array(
     'ny' => '../DEVELOPER-NYNORSK/WREST-DEVELOPER-NY.html',
     );
 
+
+
 $downloadLinks = array(
   'en' => 'https://chrome.google.com/webstore/detail/wrest/lbcpokhocfblmhlaanfnchmjfjacnede?utm_source=chrome-app-launcher-info-dialog',
   'no' => 'https://chrome.google.com/webstore/detail/wrest/lbcpokhocfblmhlaanfnchmjfjacnede?utm_source=chrome-app-launcher-info-dialog',
@@ -133,6 +135,9 @@ function getCurrentPageInLang($newlang)
         case 'dev':
             return $GLOBALS['devLinks'][$newlang];
             break;
+        case 'tobe':
+          return $GLOBALS['linkUncomplete'][$newlang];
+          break;
     }
 }
 
@@ -141,7 +146,7 @@ function getImports()
     ?>
     <meta charset="utf-8">
     <meta name="HTML Start Template" content="A Start Out Template for HTML Files">
-	<link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" /> 
+	<link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" type="text/css" />
    <!-- <link href="../../CSS/WREST-MAIN-CSS.css" rel="stylesheet" media="print, handheld" type="text/css" /> -->
 	<link href="../../CSS/WREST-MOBILE-CSS.css" rel="stylesheet" type="text/css" media="screen and (max-device-width: 480px), handheld" />
 
