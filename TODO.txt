@@ -1,17 +1,17 @@
 TODO 21.11.2016:
-[ ] TODO Rein: Fylle ut About page NO
-[ ] TODO Rein: Fylle ut About page EN
-[ ] TODO Rein: Fylle ut About page NY
+[X] TODO Rein: Fylle ut About page NO
+[X] TODO Rein: Fylle ut About page EN
+[X] TODO Rein: Fylle ut About page NY
 
 [X] TODO Lukas: Fylle ut Dev page EN
 [X] TODO Lukas: Fylle ut Dev page NO
 [X] TODO Lukas: Fylle ut Dev page NY
 
-[ ] TODO Isak: Fylle ut Home page EN
-[ ] TODO Isak: Fylle ut Home page NO
-[ ] TODO Isak: Fylle ut Home page NY
+[x] TODO Isak: Fylle ut Home page EN
+[X] TODO Isak: Fylle ut Home page NO
+[X] TODO Isak: Fylle ut Home page NY
 
 [X] TODO Isak: Lage forms for Contribute stuff footer
 Comment:"Gjennstår finpussing og linkvasking."
-[ ] TODO : Lage Guides for User support stuff footer
-[ ] TODO : Lage stuff for Sources i footer
+[X] TODO : Lage Guides for User support stuff footer
+[X] TODO : Lage stuff for Sources i footer
